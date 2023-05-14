@@ -52,6 +52,6 @@ For a comprehensive understanding of the rights and obligations granted by the G
 
 # Contact
 
-If you have any inquiries or would like to get in touch with me, you can reach me via email at [your-email@example.com](mailto:your-email@example.com).
+If you have any inquiries or would like to get in touch with me, you can reach me via email at [fajarrkim@gmail.com](mailto:fajarrkim@gmail.com).
 
 Thank you for visiting my website and exploring this repository! I hope you find it informative and engaging.
