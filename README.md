@@ -34,8 +34,7 @@ If you would like to make contributions or explore the source code, feel free to
 
 # License
 <div align="center">
-
-[![AGPL v3.0 Logo](https://upload.wikimedia.org/wikipedia/commons/0/06/AGPLv3_Logo.svg)](https://www.gnu.org/licenses/agpl-3.0.en.html)</div>
+  <a href="https://www.gnu.org/licenses/agpl-3.0.en.html"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/AGPLv3_Logo.svg" alt="AGPL v3.0 Logo")></a></div>
 
 ## GNU Affero General Public License 3.0
 
