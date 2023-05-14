@@ -33,6 +33,10 @@ To view the website, simply visit [fajarkim.github.io](https://fajarkim.github.i
 If you would like to make contributions or explore the source code, feel free to clone this repository and make modifications accordingly. Any feedback, suggestions, or bug reports are highly appreciated.
 
 # License
+<div align="center">
+
+[![AGPL v3.0 Logo](https://upload.wikimedia.org/wikipedia/commons/0/06/AGPLv3_Logo.svg)](https://www.gnu.org/licenses/agpl-3.0.en.html)</div>
+
 ## GNU Affero General Public License 3.0
 
 This repository contains the source code for my personal website, which is hosted at [fajarkim.github.io](https://fajarkim.github.io). The website is licensed under the GNU Affero General Public License version 3.0 (AGPL-3.0).
