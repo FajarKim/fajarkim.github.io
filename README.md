@@ -1,69 +1,57 @@
-# Jekyll Cayman theme
+# fajarkim.github.io
 
-This is a [Jekyll][1] theme for [@jasonlong][2]'s [Cayman theme][4] on [GitHub Pages][3].
+This repository contains the source code for my personal website, which is hosted at [fajarkim.github.io](https://fajarkim.github.io). The website serves as a platform for me to showcase my projects, share my thoughts and insights, and provide information about my professional background.
 
-Cayman is a clean, responsive theme for [GitHub Pages](https://pages.github.com). This theme is available as an option if you use the [Automatic Page Generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator/) or you can copy the template and styles to use on your own.
+# Features
 
-You can preview the theme at https://jasonlong.github.io/cayman-theme or with real content at https://jasonlong.github.io/geo_pattern.
+The website offers the following features:
 
-![](https://cl.ly/image/1T3r3d18311V/content)
+- **Project Showcase**: A section where I display my notable projects, providing descriptions, screenshots, and links to their respective repositories or live demos.
 
-# How to use it?
+- **Blog**: A blog section where I share articles, tutorials, and insights related to my areas of interest, such as web development, programming, and technology.
 
-Download the theme @ https://github.com/pietromenna/jekyll-cayman-theme/archive/master.zip
+- **About Me**: A dedicated page that provides an overview of my professional background, skills, and experience. It also includes my contact information for potential collaborations or inquiries.
 
-Unzip it and use it as a regular jekyll folder.
+# Technologies Used
 
-```
-$ unzip jekyll-cayman-theme-master.zip
-```
+The website is built using the following technologies and frameworks:
 
-Get inside the newly extracted folder
-```
-$ cd jekyll-cayman-theme-master
-```
+- **HTML**: The markup language used for creating the structure and content of web pages.
 
-Get the required gems
-```
-$ bundle install
-```
+- **CSS**: The styling language used for designing the visual appearance of the website.
 
-Use it!
+- **JavaScript**: The programming language used to add interactivity and dynamic features to the website.
 
-```
-$ jekyll serve
-```
+- **Bootstrap**: A popular CSS framework that provides pre-built components and responsive design utilities.
 
-For more details read about [Jekyll][1] on its web page.
+- **GitHub Pages**: The hosting platform that allows me to publish my website directly from this GitHub repository.
 
-# Setup
+# Usage
 
-Some important configuration can be done in the file `_config.yml`. Please, check the Setup section in that file.
+To view the website, simply visit [fajarkim.github.io](https://fajarkim.github.io) in your web browser. The website is designed to be responsive and compatible with various devices and screen sizes.
 
-
-## baseurl
-
-`baseurl` parameter is required in the case the site doesn't sit on the root of the domain. For example: https://pietromenna.github.io/jekyll-cayman-theme
-
-In the case above the baseurl should be set to "/jekyll-cayman-theme".
-
-In the case the site sits in the root, you can leave `baseurl` as empty "".
-
-# Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/pietromenna/jekyll-cayman-theme.
-
-# Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+If you would like to make contributions or explore the source code, feel free to clone this repository and make modifications accordingly. Any feedback, suggestions, or bug reports are highly appreciated.
 
 # License
+<div align="center">
+  <a href="https://www.gnu.org/licenses/agpl-3.0.en.html"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/AGPLv3_Logo.svg" alt="AGPL v3.0 Logo")></a></div>
 
-This work is licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license.
+## GNU Affero General Public License 3.0
 
-[1]: https://jekyllrb.com/
-[2]: https://github.com/jasonlong
-[3]: https://pages.github.com/
-[4]: https://github.com/jasonlong/cayman-theme
+This repository contains the source code for my personal website, which is hosted at [fajarkim.github.io](https://fajarkim.github.io). The website is licensed under the GNU Affero General Public License version 3.0 (AGPL-3.0).
+
+### License Details
+
+The GNU Affero General Public License 3.0 is a copyleft license designed to ensure that any modifications or extensions made to the software covered by the license are also made available under the same terms. This license is specifically intended for web-based applications and services.
+
+By using this license for my website, I am granting users the freedom to access, use, modify, and distribute the source code. Additionally, any modifications or enhancements made to the website's codebase must also be made available under the terms of the AGPL-3.0 license.
+
+Please note that this license applies to the source code of the website itself and does not extend to any content, images, or media files that may be displayed on the website. The licensing of such assets is handled separately and may have different terms and restrictions.
+
+For a comprehensive understanding of the rights and obligations granted by the GNU Affero General Public License 3.0, please refer to the [LICENSE](LICENSE) file in this repository.
+
+# Contact
+
+If you have any inquiries or would like to get in touch with me, you can reach me via email at [fajarrkim@gmail.com](mailto:fajarrkim@gmail.com).
+
+Thank you for visiting my website and exploring this repository! I hope you find it informative and engaging.
