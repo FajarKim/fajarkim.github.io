@@ -13,18 +13,16 @@ const jshint = require("gulp-jshint");
 
 var path = {
   src: {
-    html: "source/*.html",
-    others: "source/*.+(php|ico|png)",
-    htminc: "source/partials/**/*.htm",
-    incdir: "source/partials/",
-    plugins: "source/plugins/**/*.*",
-    js: "source/js/*.js",
-    scss: "source/scss/**/*.scss",
-    images: "source/images/**/*.+(png|jpg|gif|svg)",
-    fonts: "source/fonts/**/*.+(eot|ttf|woff|woff2|otf)",
+    html: "*.html",
+    others: "*.+(php|ico|png)",
+    plugins: "assets/plugins/**/*.*",
+    css: "assets/css/*.css*",
+    js: "assets/js/*.js",
+    images: "assets/images/**/*.+(png|jpg|gif|svg)",
+    fonts: "assets/fonts/**/*.+(eot|ttf|woff|woff2|otf)",
   },
   build: {
-    dir: "theme/",
+    dir: "assets/",
   },
 };
 
@@ -36,14 +34,6 @@ gulp.task("html:build", function () {
       fileinclude({
         basepath: path.src.incdir,
       })
-    )
-    .pipe(
-      comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
     )
     .pipe(gulp.dest(path.build.dir))
     .pipe(
@@ -65,14 +55,6 @@ gulp.task("scss:build", function () {
     )
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("/"))
-    .pipe(
-      comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
-    )
     .pipe(gulp.dest(path.build.dir + "css/"))
     .pipe(
       bs.reload({
@@ -85,17 +67,9 @@ gulp.task("scss:build", function () {
 gulp.task("js:build", function () {
   return gulp
     .src(path.src.js)
-    .pipe(jshint("./.jshintrc"))
+    .pipe(jshint("/.jshintrc"))
     .pipe(jshint.reporter("jshint-stylish"))
     .on("error", gutil.log)
-    .pipe(
-      comments(`
-  WEBSITE: https://themefisher.com
-  TWITTER: https://twitter.com/themefisher
-  FACEBOOK: https://www.facebook.com/themefisher
-  GITHUB: https://github.com/themefisher/
-  `)
-    )
     .pipe(gulp.dest(path.build.dir + "js/"))
     .pipe(
       bs.reload({
@@ -147,7 +121,7 @@ gulp.task("others:build", function () {
 
 // Clean Build Folder
 gulp.task("clean", function (cb) {
-  rimraf("./theme", cb);
+  rimraf("/assets", cb);
 });
 
 // Watch Task
