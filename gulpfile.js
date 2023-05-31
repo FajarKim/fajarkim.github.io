@@ -22,7 +22,7 @@ var path = {
     fonts: "assets/fonts/**/*.+(eot|ttf|woff|woff2|otf)",
   },
   build: {
-    dir: "assets/",
+    dir: "/",
   },
 };
 
@@ -55,7 +55,7 @@ gulp.task("scss:build", function () {
     )
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("/"))
-    .pipe(gulp.dest(path.build.dir + "css/"))
+    .pipe(gulp.dest(path.build.dir + "assets/css/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -70,7 +70,7 @@ gulp.task("js:build", function () {
     .pipe(jshint("/.jshintrc"))
     .pipe(jshint.reporter("jshint-stylish"))
     .on("error", gutil.log)
-    .pipe(gulp.dest(path.build.dir + "js/"))
+    .pipe(gulp.dest(path.build.dir + "assets/js/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -94,7 +94,7 @@ gulp.task("images:build", function () {
 gulp.task("fonts:build", function () {
   return gulp
     .src(path.src.fonts)
-    .pipe(gulp.dest(path.build.dir + "fonts/"))
+    .pipe(gulp.dest(path.build.dir + "assets/fonts/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -106,7 +106,7 @@ gulp.task("fonts:build", function () {
 gulp.task("plugins:build", function () {
   return gulp
     .src(path.src.plugins)
-    .pipe(gulp.dest(path.build.dir + "plugins/"))
+    .pipe(gulp.dest(path.build.dir + "assets/plugins/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -121,7 +121,7 @@ gulp.task("others:build", function () {
 
 // Clean Build Folder
 gulp.task("clean", function (cb) {
-  rimraf("/assets", cb);
+  rimraf("/", cb);
 });
 
 // Watch Task
