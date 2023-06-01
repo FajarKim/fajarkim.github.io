@@ -1,15 +1,8 @@
-/**
- * WEBSITE: https://themefisher.com
- * TWITTER: https://twitter.com/themefisher
- * FACEBOOK: https://www.facebook.com/themefisher
- * GITHUB: https://github.com/themefisher/
- */
-
 /*!------------------------------------------------------------------
 [MAIN STYLESHEET]
 
-PROJECT:	Project Name
-VERSION:	Versoin Number
+PROJECT:	Fajar Kim Website
+VERSION:	-
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
@@ -82,23 +75,23 @@ h6, .h6 {
 }
 
 .btn-primary {
-  background: #4FD675;
+  background: #686868;
   color: #fff;
-  border-color: #4FD675;
+  border-color: #686868;
 }
 .btn-primary:active, .btn-primary:hover, .btn-primary.focus, .btn-primary.active {
-  background: #4FD675 !important;
-  border-color: #4FD675 !important;
+  background: #686868 !important;
+  border-color: #686868 !important;
 }
 
 .btn-outline-primary {
   background: transparent;
-  color: #4FD675;
-  border-color: #4FD675;
+  color: #686868;
+  border-color: #686868;
 }
 .btn-outline-primary:active, .btn-outline-primary:hover, .btn-outline-primary.focus, .btn-outline-primary.active {
-  background: #4FD675 !important;
-  border-color: #4FD675 !important;
+  background: #686868 !important;
+  border-color: #686868 !important;
   color: #fff;
 }
 
@@ -155,7 +148,7 @@ select:focus {
 }
 
 a:hover {
-  color: #4FD675;
+  color: #686868;
 }
 
 .slick-slide {
@@ -174,8 +167,8 @@ hr {
 mark {
   padding: 0;
   background-color: transparent;
-  border-bottom: 3px solid #4FD675;
-  color: #4FD675;
+  border-bottom: 3px solid #686868;
+  color: #686868;
 }
 
 .section {
@@ -199,7 +192,7 @@ mark {
   content: "";
   height: 2px;
   width: 60px;
-  background-color: #4FD675;
+  background-color: #686868;
 }
 
 .bg-cover {
@@ -229,7 +222,7 @@ mark {
   content: "";
   height: 10px;
   width: 10px;
-  border: 1px solid #4FD675;
+  border: 1px solid #686868;
   left: 0;
   top: 7px;
   border-radius: 50px;
@@ -246,7 +239,7 @@ mark {
   text-transform: uppercase;
 }
 .badge-primary {
-  background-color: #4FD675;
+  background-color: #686868;
 }
 
 /* overlay */
@@ -265,11 +258,11 @@ mark {
 }
 
 .bg-primary {
-  background: #4FD675 !important;
+  background: #686868 !important;
 }
 
 .text-primary {
-  color: #4FD675 !important;
+  color: #686868 !important;
 }
 
 .text-default {
@@ -286,7 +279,7 @@ mark {
 }
 
 .st0 {
-  fill: #4FD675;
+  fill: #686868;
 }
 
 .sidebar-home {
@@ -334,7 +327,7 @@ mark {
   color: #333;
 }
 .navbar-white .navbar-nav .nav-link:hover {
-  color: #4FD675;
+  color: #686868;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -397,7 +390,7 @@ mark {
   border-radius: inherit;
 }
 .navbar .dropdown-item:hover {
-  color: #4FD675 !important;
+  color: #686868 !important;
   background-color: #F9F9F9;
 }
 
@@ -416,7 +409,7 @@ mark {
   z-index: 1;
 }
 .search-bar input:focus {
-  border-color: #4FD675;
+  border-color: #686868;
   outline: 0;
 }
 .search-bar input::-moz-placeholder {
@@ -469,7 +462,7 @@ mark {
   top: 25%;
 }
 .banner-shape-1 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .banner-shape-2 {
   position: absolute;
@@ -477,7 +470,7 @@ mark {
   top: 25%;
 }
 .banner-shape-2 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .banner-shape-3 {
   position: absolute;
@@ -485,14 +478,14 @@ mark {
   bottom: 15%;
 }
 .banner-shape-3 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .banner-border {
   position: absolute;
   bottom: -60px;
   left: 0;
   width: 100%;
-  stroke: #4FD675;
+  stroke: #686868;
 }
 
 .header {
@@ -513,7 +506,7 @@ mark {
   top: 25%;
 }
 .header-shape-1 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .header-shape-2 {
   position: absolute;
@@ -521,7 +514,7 @@ mark {
   top: 25%;
 }
 .header-shape-2 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .header-shape-3 {
   position: absolute;
@@ -529,14 +522,14 @@ mark {
   bottom: 15%;
 }
 .header-shape-3 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .header-border {
   position: absolute;
   bottom: -35px;
   left: 0;
   width: 100%;
-  stroke: #4FD675;
+  stroke: #686868;
 }
 
 .author {
@@ -549,7 +542,7 @@ mark {
   top: 25%;
 }
 .author-shape-1 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .author-shape-2 {
   position: absolute;
@@ -557,7 +550,7 @@ mark {
   top: 25%;
 }
 .author-shape-2 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .author-shape-3 {
   position: absolute;
@@ -565,14 +558,14 @@ mark {
   bottom: 15%;
 }
 .author-shape-3 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .author-border {
   position: absolute;
   bottom: -15px;
   left: 0;
   width: 100%;
-  stroke: #4FD675;
+  stroke: #686868;
   z-index: -1;
 }
 
@@ -601,7 +594,7 @@ mark {
   z-index: -1;
 }
 .wave-shape-1 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .wave-shape-2 {
   position: absolute;
@@ -610,7 +603,7 @@ mark {
   z-index: -1;
 }
 .wave-shape-2 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .wave-shape-3 {
   position: absolute;
@@ -619,7 +612,7 @@ mark {
   z-index: -1;
 }
 .wave-shape-3 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .wave-shape-4 {
   position: absolute;
@@ -628,7 +621,7 @@ mark {
   z-index: -1;
 }
 .wave-shape-4 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 
 .author-card {
@@ -659,7 +652,7 @@ mark {
   display: block;
   margin: 0 auto 10px;
   border: 5px solid transparent;
-  box-shadow: 0 0 0 2px #4FD675;
+  box-shadow: 0 0 0 2px #686868;
 }
 @media (max-width: 1200px) {
   .author-image {
@@ -720,7 +713,7 @@ mark {
   border-radius: 50%;
 }
 .card-meta-author:hover {
-  color: #4FD675;
+  color: #686868;
 }
 .card-meta-tag {
   margin-bottom: 0;
@@ -738,8 +731,8 @@ mark {
   display: inline-block;
 }
 .card-meta-tag li a:hover {
-  background-color: #4FD675;
-  border-color: #4FD675;
+  background-color: #686868;
+  border-color: #686868;
   color: #fff;
 }
 
@@ -748,7 +741,7 @@ mark {
   font-weight: 700;
 }
 .post-title:hover {
-  color: #4FD675;
+  color: #686868;
 }
 
 .social-icons {
@@ -764,7 +757,7 @@ mark {
   padding: 5px;
 }
 .social-icons li a:hover {
-  color: #4FD675;
+  color: #686868;
 }
 
 .post-slider {
@@ -805,7 +798,7 @@ mark {
   outline: 0;
 }
 .slick-arrow:hover {
-  background: #4FD675;
+  background: #686868;
 }
 
 .prevArrow {
@@ -826,13 +819,13 @@ mark {
   text-align: center;
   padding: 0;
   margin-right: 10px;
-  border: 1px solid #4FD675;
-  color: #4FD675;
+  border: 1px solid #686868;
+  color: #686868;
 }
 .pagination .page-item .page-link:hover {
-  background: #4FD675;
+  background: #686868;
   color: #fff;
-  border-color: #4FD675;
+  border-color: #686868;
 }
 .pagination .page-item .page-link:focus {
   box-shadow: none;
@@ -841,9 +834,9 @@ mark {
   border-radius: 50%;
 }
 .pagination .page-item.active .page-link {
-  background: #4FD675;
+  background: #686868;
   color: #fff;
-  border-color: #4FD675;
+  border-color: #686868;
 }
 
 .author-block {
@@ -893,7 +886,7 @@ mark {
   color: #333;
 }
 .content a:hover {
-  color: #4FD675;
+  color: #686868;
 }
 .content ol,
 .content ul {
@@ -918,7 +911,7 @@ mark {
   height: 8px;
   width: 8px;
   border-radius: 50%;
-  background: #4FD675;
+  background: #686868;
   left: 3px;
   top: 8px;
 }
@@ -1018,7 +1011,7 @@ mark {
   font-size: 20px !important;
   color: #555;
   padding: 20px 40px;
-  border-left: 2px solid #4FD675;
+  border-left: 2px solid #686868;
   margin: 40px 0;
   font-weight: bold;
   background: #fff;
@@ -1059,7 +1052,7 @@ mark {
   display: none;
 }
 .code-tabs .nav-tabs .nav-item.active {
-  background: #4FD675;
+  background: #686868;
 }
 .code-tabs .nav-tabs .nav-item.active .nav-link {
   color: #fff;
@@ -1089,7 +1082,7 @@ mark {
 .form-group .form-control:focus {
   outline: 0;
   box-shadow: none;
-  border-color: #4FD675;
+  border-color: #686868;
 }
 .form-group textarea.form-control {
   height: 120px;
@@ -1099,7 +1092,7 @@ mark {
   margin-bottom: 30px;
   padding: 15px;
   border-radius: 5px;
-  border-top: 6px solid #4FD675;
+  border-top: 6px solid #686868;
   background-color: #fff;
 }
 .widget-title {
@@ -1123,7 +1116,7 @@ mark {
   transition: 0.2s ease;
 }
 .widget-search input:focus {
-  border-color: #4FD675;
+  border-color: #686868;
   outline: 0;
 }
 .widget-search input::-moz-placeholder {
@@ -1151,7 +1144,7 @@ mark {
   display: block;
   margin: 0 auto 10px;
   border: 5px solid transparent;
-  box-shadow: 0 0 0 2px #4FD675;
+  box-shadow: 0 0 0 2px #686868;
 }
 @media (max-width: 1200px) {
   .widget-about img {
@@ -1180,7 +1173,7 @@ mark {
 .widget-categories a::before {
   position: absolute;
   content: "#";
-  color: #4FD675;
+  color: #686868;
   left: 0;
   top: 0;
 }
@@ -1194,21 +1187,21 @@ mark {
   color: #333;
 }
 .widget-list li a:hover {
-  color: #4FD675;
+  color: #686868;
 }
 .widget-list-inline li {
   margin-bottom: 10px;
 }
 .widget-list-inline li a {
   padding: 2px 15px;
-  border: 1px solid #4FD675;
+  border: 1px solid #686868;
   border-radius: 30px;
   display: block;
   color: #555;
 }
 .widget-list-inline li a:hover {
-  border-color: #4FD675;
-  background: #4FD675;
+  border-color: #686868;
+  background: #686868;
   color: #fff;
 }
 .widget-card {
@@ -1228,7 +1221,7 @@ mark {
   color: #777;
 }
 .widget-social a:hover {
-  color: #4FD675;
+  color: #686868;
 }
 
 .quote {
@@ -1240,14 +1233,14 @@ mark {
 }
 .quote i {
   font-size: 24px;
-  color: #4FD675;
+  color: #686868;
   margin-right: 10px;
 }
 .quote p {
   font-style: italic;
 }
 .quote-by {
-  color: #4FD675;
+  color: #686868;
 }
 
 .instagram-post img {
@@ -1267,7 +1260,7 @@ mark {
   z-index: -1;
 }
 .error-shape-1 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .error-shape-2 {
   position: absolute;
@@ -1276,7 +1269,7 @@ mark {
   z-index: -1;
 }
 .error-shape-2 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 .error-shape-3 {
   position: absolute;
@@ -1285,7 +1278,7 @@ mark {
   z-index: -1;
 }
 .error-shape-3 .path {
-  fill: #4FD675;
+  fill: #686868;
 }
 
 .footer {
@@ -1302,13 +1295,13 @@ mark {
   padding: 5px;
 }
 .footer-list a:hover {
-  color: #4FD675;
+  color: #686868;
 }
 .footer-border {
   position: absolute;
   top: -75px;
   width: 100%;
-  stroke: #4FD675;
+  stroke: #686868;
 }
 
 .image-wrapper {
@@ -1334,7 +1327,7 @@ mark {
   content: "";
   height: 100%;
   width: 100%;
-  border: 1px solid #4FD675;
+  border: 1px solid #686868;
   left: 15px;
   top: 15px;
   border-radius: inherit;
@@ -1368,7 +1361,7 @@ mark {
   line-height: 55px;
   font-size: 20px;
   color: #fff;
-  background-color: #4FD675;
+  background-color: #686868;
   text-align: center;
   box-shadow: 0 0 0 5px rgba(79, 214, 117, 0.7);
   transition: 0.2s ease-out;
@@ -1382,7 +1375,7 @@ mark {
   height: 150px;
   width: 150px;
   color: #fff;
-  background-color: #4FD675;
+  background-color: #686868;
   line-height: 150px;
   border-radius: 50%;
   text-align: center;
@@ -1452,9 +1445,9 @@ mark {
   border: 2px solid transparent;
 }
 .nav-pills-icon .nav-link.active {
-  color: #4FD675;
+  color: #686868;
   background-color: transparent;
-  border-color: #4FD675;
+  border-color: #686868;
 }
 
 .book-cover {
