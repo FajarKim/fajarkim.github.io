@@ -75,23 +75,23 @@ h6, .h6 {
 }
 
 .btn-primary {
-  background: #686868;
+  background: #929292;
   color: #fff;
-  border-color: #686868;
+  border-color: #929292;
 }
 .btn-primary:active, .btn-primary:hover, .btn-primary.focus, .btn-primary.active {
-  background: #686868 !important;
-  border-color: #686868 !important;
+  background: #929292 !important;
+  border-color: #929292 !important;
 }
 
 .btn-outline-primary {
   background: transparent;
-  color: #686868;
-  border-color: #686868;
+  color: #929292;
+  border-color: #929292;
 }
 .btn-outline-primary:active, .btn-outline-primary:hover, .btn-outline-primary.focus, .btn-outline-primary.active {
-  background: #686868 !important;
-  border-color: #686868 !important;
+  background: #929292 !important;
+  border-color: #929292 !important;
   color: #fff;
 }
 
@@ -101,12 +101,12 @@ body {
 }
 
 ::-moz-selection {
-  background: #2ec458;
+  background: #6C6C6C;
   color: #fff;
 }
 
 ::selection {
-  background: #2ec458;
+  background: #6C6C6C;
   color: #fff;
 }
 
@@ -148,7 +148,7 @@ select:focus {
 }
 
 a:hover {
-  color: #686868;
+  color: #929292;
 }
 
 .slick-slide {
@@ -167,8 +167,8 @@ hr {
 mark {
   padding: 0;
   background-color: transparent;
-  border-bottom: 3px solid #686868;
-  color: #686868;
+  border-bottom: 3px solid #929292;
+  color: #929292;
 }
 
 .section {
@@ -192,7 +192,7 @@ mark {
   content: "";
   height: 2px;
   width: 60px;
-  background-color: #686868;
+  background-color: #929292;
 }
 
 .bg-cover {
@@ -222,7 +222,7 @@ mark {
   content: "";
   height: 10px;
   width: 10px;
-  border: 1px solid #686868;
+  border: 1px solid #929292;
   left: 0;
   top: 7px;
   border-radius: 50px;
@@ -239,7 +239,7 @@ mark {
   text-transform: uppercase;
 }
 .badge-primary {
-  background-color: #686868;
+  background-color: #929292;
 }
 
 /* overlay */
@@ -258,11 +258,11 @@ mark {
 }
 
 .bg-primary {
-  background: #686868 !important;
+  background: #929292 !important;
 }
 
 .text-primary {
-  color: #686868 !important;
+  color: #929292 !important;
 }
 
 .text-default {
@@ -279,7 +279,7 @@ mark {
 }
 
 .st0 {
-  fill: #686868;
+  fill: #929292;
 }
 
 .sidebar-home {
@@ -327,7 +327,7 @@ mark {
   color: #333;
 }
 .navbar-white .navbar-nav .nav-link:hover {
-  color: #686868;
+  color: #929292;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -390,7 +390,7 @@ mark {
   border-radius: inherit;
 }
 .navbar .dropdown-item:hover {
-  color: #686868 !important;
+  color: #929292 !important;
   background-color: #F9F9F9;
 }
 
@@ -409,7 +409,7 @@ mark {
   z-index: 1;
 }
 .search-bar input:focus {
-  border-color: #686868;
+  border-color: #929292;
   outline: 0;
 }
 .search-bar input::-moz-placeholder {
@@ -462,7 +462,7 @@ mark {
   top: 25%;
 }
 .banner-shape-1 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .banner-shape-2 {
   position: absolute;
@@ -470,7 +470,7 @@ mark {
   top: 25%;
 }
 .banner-shape-2 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .banner-shape-3 {
   position: absolute;
@@ -478,14 +478,14 @@ mark {
   bottom: 15%;
 }
 .banner-shape-3 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .banner-border {
   position: absolute;
   bottom: -60px;
   left: 0;
   width: 100%;
-  stroke: #686868;
+  stroke: #929292;
 }
 
 .header {
@@ -506,7 +506,7 @@ mark {
   top: 25%;
 }
 .header-shape-1 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .header-shape-2 {
   position: absolute;
@@ -514,7 +514,7 @@ mark {
   top: 25%;
 }
 .header-shape-2 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .header-shape-3 {
   position: absolute;
@@ -522,14 +522,14 @@ mark {
   bottom: 15%;
 }
 .header-shape-3 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .header-border {
   position: absolute;
   bottom: -35px;
   left: 0;
   width: 100%;
-  stroke: #686868;
+  stroke: #929292;
 }
 
 .author {
@@ -542,7 +542,7 @@ mark {
   top: 25%;
 }
 .author-shape-1 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .author-shape-2 {
   position: absolute;
@@ -550,7 +550,7 @@ mark {
   top: 25%;
 }
 .author-shape-2 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .author-shape-3 {
   position: absolute;
@@ -558,14 +558,14 @@ mark {
   bottom: 15%;
 }
 .author-shape-3 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .author-border {
   position: absolute;
   bottom: -15px;
   left: 0;
   width: 100%;
-  stroke: #686868;
+  stroke: #929292;
   z-index: -1;
 }
 
@@ -594,7 +594,7 @@ mark {
   z-index: -1;
 }
 .wave-shape-1 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .wave-shape-2 {
   position: absolute;
@@ -603,7 +603,7 @@ mark {
   z-index: -1;
 }
 .wave-shape-2 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .wave-shape-3 {
   position: absolute;
@@ -612,7 +612,7 @@ mark {
   z-index: -1;
 }
 .wave-shape-3 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .wave-shape-4 {
   position: absolute;
@@ -621,7 +621,7 @@ mark {
   z-index: -1;
 }
 .wave-shape-4 .path {
-  fill: #686868;
+  fill: #929292;
 }
 
 .author-card {
@@ -652,7 +652,7 @@ mark {
   display: block;
   margin: 0 auto 10px;
   border: 5px solid transparent;
-  box-shadow: 0 0 0 2px #686868;
+  box-shadow: 0 0 0 2px #929292;
 }
 @media (max-width: 1200px) {
   .author-image {
@@ -713,7 +713,7 @@ mark {
   border-radius: 50%;
 }
 .card-meta-author:hover {
-  color: #686868;
+  color: #929292;
 }
 .card-meta-tag {
   margin-bottom: 0;
@@ -731,8 +731,8 @@ mark {
   display: inline-block;
 }
 .card-meta-tag li a:hover {
-  background-color: #686868;
-  border-color: #686868;
+  background-color: #929292;
+  border-color: #929292;
   color: #fff;
 }
 
@@ -741,7 +741,7 @@ mark {
   font-weight: 700;
 }
 .post-title:hover {
-  color: #686868;
+  color: #929292;
 }
 
 .social-icons {
@@ -757,7 +757,7 @@ mark {
   padding: 5px;
 }
 .social-icons li a:hover {
-  color: #686868;
+  color: #929292;
 }
 
 .post-slider {
@@ -785,7 +785,7 @@ mark {
   width: 50px;
   line-height: 50px;
   border-radius: 50%;
-  background: rgba(79, 214, 117, 0.5);
+  background: rgba(131, 131, 131, 0.5);
   color: #fff;
   border: 0;
 }
@@ -798,7 +798,7 @@ mark {
   outline: 0;
 }
 .slick-arrow:hover {
-  background: #686868;
+  background: #929292;
 }
 
 .prevArrow {
@@ -819,13 +819,13 @@ mark {
   text-align: center;
   padding: 0;
   margin-right: 10px;
-  border: 1px solid #686868;
-  color: #686868;
+  border: 1px solid #929292;
+  color: #929292;
 }
 .pagination .page-item .page-link:hover {
-  background: #686868;
+  background: #929292;
   color: #fff;
-  border-color: #686868;
+  border-color: #929292;
 }
 .pagination .page-item .page-link:focus {
   box-shadow: none;
@@ -834,9 +834,9 @@ mark {
   border-radius: 50%;
 }
 .pagination .page-item.active .page-link {
-  background: #686868;
+  background: #929292;
   color: #fff;
-  border-color: #686868;
+  border-color: #929292;
 }
 
 .author-block {
@@ -886,7 +886,7 @@ mark {
   color: #333;
 }
 .content a:hover {
-  color: #686868;
+  color: #929292;
 }
 .content ol,
 .content ul {
@@ -911,7 +911,7 @@ mark {
   height: 8px;
   width: 8px;
   border-radius: 50%;
-  background: #686868;
+  background: #929292;
   left: 3px;
   top: 8px;
 }
@@ -1011,7 +1011,7 @@ mark {
   font-size: 20px !important;
   color: #555;
   padding: 20px 40px;
-  border-left: 2px solid #686868;
+  border-left: 2px solid #929292;
   margin: 40px 0;
   font-weight: bold;
   background: #fff;
@@ -1052,7 +1052,7 @@ mark {
   display: none;
 }
 .code-tabs .nav-tabs .nav-item.active {
-  background: #686868;
+  background: #929292;
 }
 .code-tabs .nav-tabs .nav-item.active .nav-link {
   color: #fff;
@@ -1082,7 +1082,7 @@ mark {
 .form-group .form-control:focus {
   outline: 0;
   box-shadow: none;
-  border-color: #686868;
+  border-color: #929292;
 }
 .form-group textarea.form-control {
   height: 120px;
@@ -1092,7 +1092,7 @@ mark {
   margin-bottom: 30px;
   padding: 15px;
   border-radius: 5px;
-  border-top: 6px solid #686868;
+  border-top: 6px solid #929292;
   background-color: #fff;
 }
 .widget-title {
@@ -1116,7 +1116,7 @@ mark {
   transition: 0.2s ease;
 }
 .widget-search input:focus {
-  border-color: #686868;
+  border-color: #929292;
   outline: 0;
 }
 .widget-search input::-moz-placeholder {
@@ -1144,7 +1144,7 @@ mark {
   display: block;
   margin: 0 auto 10px;
   border: 5px solid transparent;
-  box-shadow: 0 0 0 2px #686868;
+  box-shadow: 0 0 0 2px #929292;
 }
 @media (max-width: 1200px) {
   .widget-about img {
@@ -1173,7 +1173,7 @@ mark {
 .widget-categories a::before {
   position: absolute;
   content: "#";
-  color: #686868;
+  color: #929292;
   left: 0;
   top: 0;
 }
@@ -1187,21 +1187,21 @@ mark {
   color: #333;
 }
 .widget-list li a:hover {
-  color: #686868;
+  color: #929292;
 }
 .widget-list-inline li {
   margin-bottom: 10px;
 }
 .widget-list-inline li a {
   padding: 2px 15px;
-  border: 1px solid #686868;
+  border: 1px solid #929292;
   border-radius: 30px;
   display: block;
   color: #555;
 }
 .widget-list-inline li a:hover {
-  border-color: #686868;
-  background: #686868;
+  border-color: #929292;
+  background: #929292;
   color: #fff;
 }
 .widget-card {
@@ -1221,7 +1221,7 @@ mark {
   color: #777;
 }
 .widget-social a:hover {
-  color: #686868;
+  color: #929292;
 }
 
 .quote {
@@ -1233,14 +1233,14 @@ mark {
 }
 .quote i {
   font-size: 24px;
-  color: #686868;
+  color: #929292;
   margin-right: 10px;
 }
 .quote p {
   font-style: italic;
 }
 .quote-by {
-  color: #686868;
+  color: #929292;
 }
 
 .instagram-post img {
@@ -1260,7 +1260,7 @@ mark {
   z-index: -1;
 }
 .error-shape-1 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .error-shape-2 {
   position: absolute;
@@ -1269,7 +1269,7 @@ mark {
   z-index: -1;
 }
 .error-shape-2 .path {
-  fill: #686868;
+  fill: #929292;
 }
 .error-shape-3 {
   position: absolute;
@@ -1278,7 +1278,7 @@ mark {
   z-index: -1;
 }
 .error-shape-3 .path {
-  fill: #686868;
+  fill: #929292;
 }
 
 .footer {
@@ -1295,13 +1295,13 @@ mark {
   padding: 5px;
 }
 .footer-list a:hover {
-  color: #686868;
+  color: #929292;
 }
 .footer-border {
   position: absolute;
   top: -75px;
   width: 100%;
-  stroke: #686868;
+  stroke: #929292;
 }
 
 .image-wrapper {
@@ -1327,7 +1327,7 @@ mark {
   content: "";
   height: 100%;
   width: 100%;
-  border: 1px solid #686868;
+  border: 1px solid #929292;
   left: 15px;
   top: 15px;
   border-radius: inherit;
@@ -1361,21 +1361,21 @@ mark {
   line-height: 55px;
   font-size: 20px;
   color: #fff;
-  background-color: #686868;
+  background-color: #929292;
   text-align: center;
-  box-shadow: 0 0 0 5px rgba(79, 214, 117, 0.7);
+  box-shadow: 0 0 0 5px rgba(131, 131, 131, 0.7);
   transition: 0.2s ease-out;
 }
 .play-btn:hover {
   color: #fff;
-  box-shadow: 0 0 0 10px rgba(79, 214, 117, 0.7);
+  box-shadow: 0 0 0 10px rgba(131, 131, 131, 0.7);
 }
 
 .mission-name {
   height: 150px;
   width: 150px;
   color: #fff;
-  background-color: #686868;
+  background-color: #929292;
   line-height: 150px;
   border-radius: 50%;
   text-align: center;
@@ -1445,9 +1445,9 @@ mark {
   border: 2px solid transparent;
 }
 .nav-pills-icon .nav-link.active {
-  color: #686868;
+  color: #929292;
   background-color: transparent;
-  border-color: #686868;
+  border-color: #929292;
 }
 
 .book-cover {
