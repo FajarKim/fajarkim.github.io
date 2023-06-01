@@ -74,7 +74,7 @@ $(window).on('load', function () {
 			get: 'user',
 			resolution: 'low_resolution',
 			accessToken: accessToken,
-			template: '<div class="instagram-post"><a href="{{link}}" target="_blank"><img src="{{image}}"></a></div>'
+			template: '<div class="instagram-post"><a href="{{link}}" target="_blank" rel="noopener noreferrer"><img src="{{image}}"></a></div>'
 		});
 		userFeed.run();
 	}
