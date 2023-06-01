@@ -14,8 +14,9 @@ const jshint = require("gulp-jshint");
 var path = {
   src: {
     html: "*.html",
-    others: "*.+(php|ico|png)",
-    incdir: "assets/html/",
+    others: "assets/*.+(php|ico|png)",
+    htminc: "assets/htminc/*.htm",
+    incdir: "assets/htminc/",
     plugins: "assets/plugins/**/*.*",
     css: "assets/css/*.css*",
     js: "assets/js/*.js",
