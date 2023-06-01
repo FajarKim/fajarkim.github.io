@@ -15,6 +15,7 @@ var path = {
   src: {
     html: "*.html",
     others: "*.+(php|ico|png)",
+    incdir: "assets/html/",
     plugins: "assets/plugins/**/*.*",
     css: "assets/css/*.css*",
     js: "assets/js/*.js",
@@ -82,7 +83,7 @@ gulp.task("js:build", function () {
 gulp.task("images:build", function () {
   return gulp
     .src(path.src.images)
-    .pipe(gulp.dest(path.build.dir + "images/"))
+    .pipe(gulp.dest(path.build.dir + "assets/images/"))
     .pipe(
       bs.reload({
         stream: true,
