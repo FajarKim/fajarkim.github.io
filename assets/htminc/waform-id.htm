@@ -9,26 +9,23 @@
 <form>
 <div class="form-group">
 <label for="name">Nama Lengkap (Wajib)</label>
-<input class="validate form-control" id="wa_name" name="name" placeholder="Rangga Fajar Oktariansyah" required="" type="text" value=''/>
+<input class="validate form-control" id="wa_name" name="name" placeholder="Rangga Fajar Oktariansyah" required type="text" value=''/>
 </div>
 <div class="form-group">
 <label for="number">Nomor WhatsApp (Wajib)</label>
-<input class="validate form-control" id="wa_number" name="count" placeholder="62xxxxxxxxxxx" required="" type="number" value=''/>
+<input class="validate form-control" id="wa_number" name="count" placeholder="62xxxxxxxxxxx" required type="number" value=''/>
 </div>
 <div class="form-group">
 <label for="subject">Alasan Menghubungi (Wajib)</label>
-<input class="validate form-control" id="wa_subject" name="subject" placeholder="Pertanyaan Umum" required="" type="text" value=''/>
+<input class="validate form-control" id="wa_subject" name="subject" placeholder="Pertanyaan Umum" required type="text" value=''/>
 </div>
 <div class="form-group">
 <label for="message">Tulis Pesan Anda (Wajib)</label>
 <textarea class="form-control" id='wa_textarea' placeholder="Ketik di sini..." maxlength='5000' row='1' required></textarea>
 </div>
-<div class="form-group">
-<div class="g-recaptcha" data-sitekey="6LdcuV8mAAAAAHV9kSASzAvZZz9tfjSsOKOlKD5C"></div>
-</div>
-<a style="text-decoration:none" class="send_form" href="javascript:void" type="submit" title="Kirim Sekarang"><button class="btn btn-primary">Kirim Sekarang</button></a>
+<button style="text-decoration:none" class="send_form btn btn-primary" href="javascript:void" type="submit" title="Kirim Sekarang">Kirim Sekarang</button>
 </form>
-
+<small><div id="text-info"></div></small>
 <center><small>Created by www.idblanter.com</small></center>
 
 <script type="text/javascript">
@@ -40,6 +37,7 @@ var input_blanter = document.getElementById('wa_number');
 var walink = 'https://web.whatsapp.com/send',
     phone = '6285659850910',
     walink2 = 'Halo 👋🏻';
+    text_yes = 'Terkirim';
 
 /* Smartphone Support */
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -64,6 +62,7 @@ var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A
 
 /* Whatsapp Window Open */
 window.open(blanter_whatsapp,'_blank');
+document.getElementById("text-info").innerHTML = '<div class="content notices info"><p>'+text_yes+'</p></div>';
 }
 });
 //]]>

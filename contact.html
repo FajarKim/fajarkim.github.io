@@ -30,18 +30,10 @@
   <meta property="og:url" content="" />
   <meta property="og:updated_time" content="2020-03-15T15:40:24+06:00" />
   
-    <!-- Load Library Google reCaptcha -->
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-
   <script src="/assets/plugins/jQuery/jquery.min.js"></script>
   <script>
      $(function() {
     	$("#footerHTMLinclude").load("/assets/htminc/footer-id.htm");
-     });
-  </script>
-  <script>
-     $(function() {
-    	$("#navbarHTMLinclude").load("/assets/htminc/nav-banner-id.htm");
      });
   </script>
   <script>
@@ -53,7 +45,75 @@
 <body>
 <!-- navigation -->
 <header class="navigation fixed-top">
-  <div id="navbarHTMLinclude"></div>
+  <!-- navigation -->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-white">
+      <a class="navbar-brand order-1" href="https://fajarkim.github.io">
+        <img class="img-fluid" width="100px" src="/assets/images/logo.svg"
+          alt="Beranda | Fajar Kim">
+      </a>
+      <div class="collapse navbar-collapse text-center order-lg-2 order-3" id="navigation">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://fajarkim.github.io">Beranda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Tentang <i class="ti-angle-down ml-1"></i>
+            </a>
+            <div class="dropdown-menu">
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/about-me">Tentang Saya</a>
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/about-us">Tentang Penulis</a>
+              
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://fajarkim.github.io/contact">Kontak</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Halaman <i class="ti-angle-down ml-1"></i>
+            </a>
+            <div class="dropdown-menu">
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/author-single">Blog</a>
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/author-single">Postingan</a>
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/author">Repositori</a>
+
+              <a class="dropdown-item" href="https://fajarkim.github.io/privacy-policy">Kebijakan Privasi</a>
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/terms-conditions">Syarat Ketentuan</a>
+              
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://fajarkim.github.io/shop">Belanja</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="order-2 order-lg-3 d-flex align-items-center">
+        <select class="m-2 border-0 bg-transparent" id="select-language">
+          <option id="en" value="" selected>Indonesia</option>
+          <option id="fr" value="">English</option>
+          <option id="fr" value="">Français</option>
+        </select>
+        
+        <button class="navbar-toggler border-0 order-1" type="button" data-toggle="collapse" data-target="#navigation">
+          <i class="ti-menu"></i>
+        </button>
+      </div>
+
+    </nav>
+  </div>
 </header>
 <!-- /navigation -->
 <div class="header text-center">
@@ -124,18 +184,18 @@
       <div class="col-lg-8 mx-auto">
         
         <div class="content mb-5">
-          <h2 id="we-would-love-to-hear-from-you">Ada yang ingin ditanyakan?</h2>
-          <p>Jika Anda ingin menghubungi Saya untuk mendapatkan informasi lebih lanjut, mengajukan pertanyaan, kritik, maupun saran, silakan isi formulir berikut ini:</p>
+          <h2>Ada yang ingin ditanyakan?</h2>
+          <p>Jika Kamu ingin menghubungi Saya untuk mendapatkan informasi lebih lanjut, mengajukan pertanyaan, kritik, maupun saran, silakan isi formulir berikut ini:</p>
         </div>
         
         <ul class="nav nav-pills nav-pills-icon row text-center" id="myTab" role="tablist">
         <li class="nav-item col-md-6 col-sm-6" role="presentation">
-           <a class="nav-link shadow active" id="tab-one" data-toggle="tab" href="#tabOne" role="tab" aria-controls="tabOne" aria-selected="true">
+           <a class="nav-link shadow active" id="tab-sendemail" data-toggle="tab" href="#sendEmail" role="tab" aria-controls="sendEmail" aria-selected="true">
               <h4 class="text-uppercase mt-3 d-block"><font color="#929292"><span class="fas fa-envelope"></font> Email</h4>
            </a>
         </li>
         <li class="nav-item col-md-3 col-sm-6" role="presentation">
-           <a class="nav-link shadow" id="tab-two" data-toggle="tab" href="#tabTwo" role="tab" aria-controls="tabTwo" aria-selected="false">
+           <a class="nav-link shadow" id="tab-sendwa" data-toggle="tab" href="#sendWhatsApp" role="tab" aria-controls="sendWhatsApp" aria-selected="false">
             <h4 class="text-uppercase mt-3 d-block"><font color="#929292"><span class="fab fa-whatsapp"></font> WhatsApp</h4>
          </a>
         </li>
@@ -144,7 +204,7 @@
      <div class="row">
          <div class="col-12">
             <div class="tab-content" id="myTabContent">
-               <div class="tab-pane fade show active" id="tabOne" role="tabpanel" aria-labelledby="tab-one">
+               <div class="tab-pane fade show active" id="sendEmail" role="tabpanel" aria-labelledby="tab-sendemail">
                   <div class="content"></br>
                      <form method="POST" action="https://formsubmit.co/fajarrkim@gmail.com" target="_blank">
                        <div class="form-group">
@@ -157,28 +217,44 @@
                        </div>
                        <div class="form-group">
                          <label for="subject">Alasan Menghubungi (Wajib)</label>
-                         <input type="text" name="_subject" id="reason" class="form-control" placeholder="Pertanyaan Umum" required>
+                         <input type="text" name="_subject" id="subject" class="form-control" placeholder="Pertanyaan Umum" required>
                        </div>
                        <div class="form-group">
                          <label for="message">Tulis Pesan Anda (Wajib)</label>
                          <textarea name="message" id="message" class="form-control" placeholder="Ketik di sini..." required></textarea>
-                       </div>
-                       <div class="form-group">
-                         <div class="g-recaptcha" data-sitekey="6LdcuV8mAAAAAHV9kSASzAvZZz9tfjSsOKOlKD5C"></div>
                        </div>
                        <button type="submit" class="btn btn-primary">Kirim Sekarang</button>
                      </form>
                      <center><small>Plugin by formsubmit.co</small></center>
                  </div>
              </div>
-             <div class="tab-pane fade" id="tabTwo" role="tabpanel" aria-labelledby="tab-two">
+             <div class="tab-pane fade" id="sendWhatsApp" role="tabpanel" aria-labelledby="tab-sendwa">
                   <div class="content"></br>
                      <div id="whatsappSend"></div>
-                 </div>
+                  </div>
              </div>
-         </div>
+          </div>
+        </div>
+     </div>
+     
+     <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <div class="content mb-5">
+        	</br><p>Atau bisa juga dengan mengklik tautan berikut untuk menuju chat secara langsung:</p>
+        </div>
+        <div class="widget">
+    <h4 class="widget-title"><span>Kontak Saya</span></h4>
+    <ul class="list-inline widget-social">
+      <li class="list-inline-item"><a href="https://wa.me/6285659850910"><span class="fab fa-whatsapp"></span></a></li>
+      <li class="list-inline-item"><a href="https://t.me/FajarThea"><span class="fab fa-telegram"></span></a></li>
+      <li class="list-inline-item"><a href="https://m.me/fajarrkim"><span class="fab fa-facebook-messenger"></span></a></li>
+      <li class="list-inline-item"><a href="mailto:fajarrkim@gmail.com"><span class="fas fa-envelope"></span></a></li>
+    </ul>
+  </div>
+       </div>
       </div>
-    </div>
+     </div>
   </div>
 </section>
 
@@ -204,39 +280,9 @@
         <div class="instagram-post"><img src="/assets/images/instagram/4.jpg"></div>
       </div>
   </div>
-  
-  <div class="container">
-      <div class="row align-items-center">
-      <div class="col-md-5 text-center text-md-left mb-4">
-          <ul class="list-inline footer-list mb-0">
-            <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li class="list-inline-item"><a href="terms-conditions.html">Terms Conditions</a></li>
-          </ul>
-      </div>
-      <div class="col-md-2 text-center mb-4">
-          <a href="index.html"><img class="img-fluid" width="100px" src="/assets/images/logo.svg" alt="Reader | Hugo Personal Blog Template"></a>
-      </div>
-      <div class="col-md-5 text-md-right text-center mb-4">
-          <ul class="list-inline footer-list mb-0">
-          
-          <li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
-          
-          <li class="list-inline-item"><a href="#"><i class="ti-twitter-alt"></i></a></li>
-          
-          <li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
-          
-          <li class="list-inline-item"><a href="#"><i class="ti-github"></i></a></li>
-          
-          <li class="list-inline-item"><a href="#"><i class="ti-youtube"></i></a></li>
-          
-          </ul>
-      </div>
-      <div class="col-12">
-          <div class="border-bottom border-default"></div>
-      </div>
-      </div>
-  </div>
-  </footer>
+
+  <div id="footerHTMLinclude"></div>
+</footer>
 
 
   <!-- JS Plugins -->
