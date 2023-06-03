@@ -24,15 +24,11 @@
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
   <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
 
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src="/assets/plugins/jQuery/jquery.min.js"></script>
   <script>
      $(function() {
     	$("#footerHTMLinclude").load("/assets/htminc/footer-id.htm");
-     });
-  </script>
-  <script>
-     $(function() {
-    	$("#whatsappSend").load("/assets/htminc/waform-id.htm");
      });
   </script>
 </head>
@@ -225,7 +221,70 @@
              </div>
              <div class="tab-pane fade" id="sendWhatsApp" role="tabpanel" aria-labelledby="tab-sendwa">
                   <div class="content"></br>
-                     <div id="whatsappSend"></div>
+                     <form>
+                       <div class="form-group">
+                         <label for="name">Nama Lengkap (Wajib)</label>
+                         <input class="validate form-control" id="wa_name" name="name" placeholder="Rangga Fajar Oktariansyah" required="" type="text" value=''/>
+                       </div>
+                       <div class="form-group">
+                         <label for="number">Nomor WhatsApp (Wajib)</label>
+                         <input class="validate form-control" id="wa_number" name="count" placeholder="62xxxxxxxxxxx" required="" type="number" value=''/>
+                       </div>
+                       <div class="form-group">
+                         <label for="subject">Alasan Menghubungi (Wajib)</label>
+                         <input class="validate form-control" id="wa_subject" name="subject" placeholder="Pertanyaan Umum" required="" type="text" value=''/>
+                       </div>
+                       <div class="form-group">
+                         <label for="message">Tulis Pesan Anda (Wajib)</label>
+                         <textarea class="form-control" id='wa_textarea' placeholder="Ketik di sini..." maxlength='5000' row='1' required></textarea>
+                       </div>
+                       <button style="text-decoration:none" class="send_form btn btn-primary" href="javascript:void" type="submit" title="Kirim Sekarang">Kirim Sekarang</button>
+                     </form>
+                     <small><div id="text-info"></div></small>
+                     <center><small>Created by www.idblanter.com</small></center>
+
+                     <script type="text/javascript">
+//<![CDATA[
+$(document).on('click','.send_form', function(){
+var input_blanter = document.getElementById('wa_number');
+
+/* Whatsapp Settings */
+var walink = 'https://web.whatsapp.com/send',
+    phone = '6285659850910',
+    walink2 = 'Halo kak 👋🏻';
+    text_yes = 'Terkirim';
+    text_no = 'Isi semua form dengan lengkap!';
+
+/* Smartphone Support */
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+var walink = 'whatsapp://send';
+}
+
+if("" != input_blanter.value){
+
+ /* Call Input Form */
+var input_select1 = $("#wa_select :selected").text(),
+    input_name1 = $("#wa_name").val(),
+    input_number1 = $("#wa_number").val(),
+    input_subject1 = $("#wa_subject").val(),
+    input_textarea1 = $("#wa_textarea").val();
+
+/* Final Whatsapp URL */
+var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' +
+    '*Nama*: ' + input_name1 + '%0A' +
+    '*Nomor WhatsApp*: ' + input_number1 + '%0A' +
+    '*Subjek*: ' + input_subject1 + '%0A' +
+    '*Pesan*: ' + input_textarea1 + '%0A';
+
+/* Whatsapp Window Open */
+window.open(blanter_whatsapp,'_blank');
+document.getElementById("text-info").innerHTML = '<div class="content notices info"><p>'+text_yes+'</p></div>';
+} else {
+document.getElementById("text-info").innerHTML = '<div class="content notices warning"><p>'+text_no+'</p></div>';
+}
+});
+//]]>
+                     </script>
                   </div>
              </div>
           </div>
@@ -239,14 +298,14 @@
         	</br><p>Atau bisa juga dengan mengklik tautan berikut untuk menuju chat secara langsung:</p>
         </div>
         <div class="widget">
-    <h4 class="widget-title"><span>Kontak Saya</span></h4>
-    <ul class="list-inline widget-social">
-      <li class="list-inline-item"><a href="https://wa.me/6285659850910"><span class="fab fa-whatsapp"></span></a></li>
-      <li class="list-inline-item"><a href="https://t.me/FajarThea"><span class="fab fa-telegram"></span></a></li>
-      <li class="list-inline-item"><a href="https://m.me/fajarrkim"><span class="fab fa-facebook-messenger"></span></a></li>
-      <li class="list-inline-item"><a href="mailto:fajarrkim@gmail.com"><span class="fas fa-envelope"></span></a></li>
-    </ul>
-  </div>
+          <h4 class="widget-title"><span>Kontak Saya</span></h4>
+          <ul class="list-inline widget-social">
+            <li class="list-inline-item"><a href="https://wa.me/6285659850910"><span class="fab fa-whatsapp"></span></a></li>
+            <li class="list-inline-item"><a href="https://t.me/FajarThea"><span class="fab fa-telegram"></span></a></li>
+            <li class="list-inline-item"><a href="https://m.me/fajarrkim"><span class="fab fa-facebook-messenger"></span></a></li>
+            <li class="list-inline-item"><a href="mailto:fajarrkim@gmail.com"><span class="fas fa-envelope"></span></a></li>
+          </ul>
+        </div>
        </div>
       </div>
      </div>
