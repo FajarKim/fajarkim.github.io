@@ -9,15 +9,15 @@
 <form>
 <div class="form-group">
 <label for="name">Nama Lengkap (Wajib)</label>
-<input class="validate form-control" id="wa_name" name="name" placeholder="Rangga Fajar Oktariansyah" required type="text" value=''/>
+<input class="validate form-control" id="wa_name" name="name" placeholder="Rangga Fajar Oktariansyah" required="" type="text" value=''/>
 </div>
 <div class="form-group">
 <label for="number">Nomor WhatsApp (Wajib)</label>
-<input class="validate form-control" id="wa_number" name="count" placeholder="62xxxxxxxxxxx" required type="number" value=''/>
+<input class="validate form-control" id="wa_number" name="count" placeholder="62xxxxxxxxxxx" required="" type="number" value=''/>
 </div>
 <div class="form-group">
 <label for="subject">Alasan Menghubungi (Wajib)</label>
-<input class="validate form-control" id="wa_subject" name="subject" placeholder="Pertanyaan Umum" required type="text" value=''/>
+<input class="validate form-control" id="wa_subject" name="subject" placeholder="Pertanyaan Umum" required="" type="text" value=''/>
 </div>
 <div class="form-group">
 <label for="message">Tulis Pesan Anda (Wajib)</label>
@@ -38,6 +38,7 @@ var walink = 'https://web.whatsapp.com/send',
     phone = '6285659850910',
     walink2 = 'Halo 👋🏻';
     text_yes = 'Terkirim';
+    text_no = 'Isi semua form dengan lengkap!';
 
 /* Smartphone Support */
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -63,6 +64,8 @@ var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A
 /* Whatsapp Window Open */
 window.open(blanter_whatsapp,'_blank');
 document.getElementById("text-info").innerHTML = '<div class="content notices info"><p>'+text_yes+'</p></div>';
+} else {
+document.getElementById("text-info").innerHTML = '<div class="content notices warning"><p>'+text_no+'</p></div>';
 }
 });
 //]]>

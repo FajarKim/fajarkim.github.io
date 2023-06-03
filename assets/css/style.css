@@ -1462,4 +1462,31 @@ mark {
   box-shadow: none !important;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# captcha */
+#captchaBackground {
+    height: 60px;
+    weight: 70px;
+    background-image: url("../images/captcha-background.gif");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#captchaHeading {
+    color: white;
+}
+
+#captcha {
+    height: 90%;
+    width: 90%;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin: auto;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
