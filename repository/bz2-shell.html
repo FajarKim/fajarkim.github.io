@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+  <meta charset="utf-8">
+  <title>BZip2 Shell Exec | Fajar Kim</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Hugo 0.74.3" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/plugins/fontawesome/css/all.css">
+  <link rel="stylesheet" href="/assets/plugins/fontawesome/scss/_animated.scss">
+  <link rel="stylesheet" href="/assets/plugins/slick/slick.css">
+  <link rel="stylesheet" href="/assets/plugins/prismjs/prism.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon">
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="/assets/plugins/jQuery/jquery.min.js"></script>
+  <script>
+     $(function() {
+    	$("#footerHTMLinclude").load("/assets/htminc/footer-id.htm");
+     });
+  </script>
+</head>
+<body>
+<!-- navigation -->
+<header class="navigation fixed-top">
+  <!-- navigation -->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-white">
+      <a class="navbar-brand order-1" href="https://fajarkim.github.io">
+        <img class="img-fluid" width="100px" src="/assets/images/logo.svg"
+          alt="Beranda | Fajar Kim">
+      </a>
+      <div class="collapse navbar-collapse text-center order-lg-2 order-3" id="navigation">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://fajarkim.github.io"><span class="fas fa-house"></span> Beranda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"><span class="fas fa-user-pen"></span>
+              Tentang <span class="fas fa-chevron-down ml-1"></span>
+            </a>
+            <div class="dropdown-menu">
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/about-me"><span class="fas fa-user"></span> Tentang Saya</a>
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/about-us"><span class="fab fa-github"></span> GitHub</a>
+              
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://fajarkim.github.io/contact"><span class="fas fa-address-book"></span> Kontak</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"><span class="fas fa-book-open"></span> Halaman <span class="fas fa-chevron-down ml-1"></span>
+            </a>
+            <div class="dropdown-menu">
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/author-single"><span class="fas fa-pen-to-square"></span> Postingan</a>
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/author"><span class="fas fa-code"></span> Repositori</a>
+
+              <a class="dropdown-item" href="https://fajarkim.github.io/privacy-policy"><span class="fas fa-scale-unbalanced-flip"></span> Kebijakan Privasi</a>
+              
+              <a class="dropdown-item" href="https://fajarkim.github.io/terms-conditions"><span class="fas fa-scroll"></span> Syarat Ketentuan</a>
+              
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://fajarkim.github.io/shop"><span class="fas fa-cart-shopping"></span> Belanja</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="order-2 order-lg-3 d-flex align-items-center">
+        <select class="m-2 border-0 bg-transparent" id="select-language" onchange="location = this.value">
+          <option id="id" value="https://fajarkim.github.io/contact" selected>Indonesia</option>
+          <option id="en" value="https://fajarkim.github.io/en/contact">English</option>
+          <option id="fr" value="https://fajarkim.github.io/fr/contact">Français</option>
+        </select>
+        
+        <button class="navbar-toggler border-0 order-1" type="button" data-toggle="collapse" data-target="#navigation">
+          <span class="fas fa-bars"></span>
+        </button>
+      </div>
+
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+<div class="header text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 mx-auto">
+        <h1 class="mb-4">BZip2 Shell Exec</h1>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-default" href="">Beranda
+              &nbsp; &nbsp; /</a></li>
+          <li class="list-inline-item"><a class="text-default" href="">Repositori
+              &nbsp; &nbsp; /</a></li>
+          <li class="list-inline-item text-primary">BZip2 Shell Exec</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <svg class="header-shape-1" width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.965848 20.6397L0.943848 38.3906L18.6947 38.4126L18.7167 20.6617L0.965848 20.6397Z" stroke="#040306"
+      stroke-miterlimit="10" />
+    <path class="path" d="M10.4966 11.1283L10.4746 28.8792L28.2255 28.9012L28.2475 11.1503L10.4966 11.1283Z" />
+    <path d="M20.0078 1.62949L19.9858 19.3804L37.7367 19.4024L37.7587 1.65149L20.0078 1.62949Z" stroke="#040306"
+      stroke-miterlimit="10" />
+  </svg>
+
+  
+  <svg class="header-shape-2" width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_d)">
+      <path class="path"
+        d="M24.1587 21.5623C30.02 21.3764 34.6209 16.4742 34.435 10.6128C34.2491 4.75147 29.3468 0.1506 23.4855 0.336498C17.6241 0.522396 13.0233 5.42466 13.2092 11.286C13.3951 17.1474 18.2973 21.7482 24.1587 21.5623Z" />
+      <path
+        d="M5.64626 20.0297C11.1568 19.9267 15.7407 24.2062 16.0362 29.6855L24.631 29.4616L24.1476 10.8081L5.41797 11.296L5.64626 20.0297Z"
+        stroke="#040306" stroke-miterlimit="10" />
+    </g>
+    <defs>
+      <filter id="filter0_d" x="0.905273" y="0" width="37.8663" height="38.1979" filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+      </filter>
+    </defs>
+  </svg>
+
+  
+  <svg class="header-shape-3" width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.965848 20.6397L0.943848 38.3906L18.6947 38.4126L18.7167 20.6617L0.965848 20.6397Z" stroke="#040306"
+      stroke-miterlimit="10" />
+    <path class="path" d="M10.4966 11.1283L10.4746 28.8792L28.2255 28.9012L28.2475 11.1503L10.4966 11.1283Z" />
+    <path d="M20.0078 1.62949L19.9858 19.3804L37.7367 19.4024L37.7587 1.65149L20.0078 1.62949Z" stroke="#040306"
+      stroke-miterlimit="10" />
+  </svg>
+
+  
+  <svg class="header-border" height="240" viewBox="0 0 2202 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M1 123.043C67.2858 167.865 259.022 257.325 549.762 188.784C764.181 125.427 967.75 112.601 1200.42 169.707C1347.76 205.869 1901.91 374.562 2201 1"
+      stroke-width="2" />
+  </svg>
+</div>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <div class="content mb-5">
+          <h1>Enkripsi File Shell dengan BZip2 Shell Exec</h1>
+          <hr>
+          <p><img src="https://raw.githubusercontent.com/FajarKim/bz2-shell/master/image/logo.jpg" class="img-card" alt="post-thumb"></p>
+        </div>
+        <div class="text-center">
+          <a href="https://github.com/FajarKim/bz2-shell"><img src="https://img.shields.io/badge/BZip2%20Shell%20Exec-Visit%20GitHub-blue?logo=github&style=for-the-badge"></a>
+          <a href="#changelog"><img src="https://img.shields.io/badge/Version-v1.0.1-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjQuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4gLS0%2bPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTM0NSAzOS4xTDQ3Mi44IDE2OC40YzUyLjQgNTMgNTIuNCAxMzguMiAwIDE5MS4yTDM2MC44IDQ3Mi45Yy05LjMgOS40LTI0LjUgOS41LTMzLjkgLjJzLTkuNS0yNC41LS4yLTMzLjlMNDM4LjYgMzI1LjljMzMuOS0zNC4zIDMzLjktODkuNCAwLTEyMy43TDMxMC45IDcyLjljLTkuMy05LjQtOS4yLTI0LjYgLjItMzMuOXMyNC42LTkuMiAzMy45IC4yek0wIDIyOS41VjgwQzAgNTMuNSAyMS41IDMyIDQ4IDMySDE5Ny41YzE3IDAgMzMuMyA2LjcgNDUuMyAxOC43bDE2OCAxNjhjMjUgMjUgMjUgNjUuNSAwIDkwLjVMMjc3LjMgNDQyLjdjLTI1IDI1LTY1LjUgMjUtOTAuNSAwbC0xNjgtMTY4QzYuNyAyNjIuNyAwIDI0Ni41IDAgMjI5LjV6TTE0NCAxNDRhMzIgMzIgMCAxIDAgLTY0IDAgMzIgMzIgMCAxIDAgNjQgMHoiLz48L3N2Zz4%3d&style=for-the-badge"></a>
+          <a href="https://github.com/FajarKim/bz2-shell/stargazers" alt="Star"><img src="https://img.shields.io/github/stars/FajarKim/bz2-shell?label=Star&color=blue&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjQuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4gLS0%2bPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTMxNi45IDE4QzMxMS42IDcgMzAwLjQgMCAyODguMSAwcy0yMy40IDctMjguOCAxOEwxOTUgMTUwLjMgNTEuNCAxNzEuNWMtMTIgMS44LTIyIDEwLjItMjUuNyAyMS43cy0uNyAyNC4yIDcuOSAzMi43TDEzNy44IDMyOSAxMTMuMiA0NzQuN2MtMiAxMiAzIDI0LjIgMTIuOSAzMS4zczIzIDggMzMuOCAyLjNsMTI4LjMtNjguNSAxMjguMyA2OC41YzEwLjggNS43IDIzLjkgNC45IDMzLjgtMi4zczE0LjktMTkuMyAxMi45LTMxLjNMNDM4LjUgMzI5IDU0Mi43IDIyNS45YzguNi04LjUgMTEuNy0yMS4yIDcuOS0zMi43cy0xMy43LTE5LjktMjUuNy0yMS43TDM4MS4yIDE1MC4zIDMxNi45IDE4eiIvPjwvc3ZnPg%3d%3d&style=for-the-badge"></a>
+          <a href="https://github.com/FajarKim/bz2-shell/network/members"><img src="https://img.shields.io/github/forks/FajarKim/bz2-shell?label=Fork&color=blue&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjQuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4gLS0%2bPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTgwIDEwNGEyNCAyNCAwIDEgMCAwLTQ4IDI0IDI0IDAgMSAwIDAgNDh6bTgwLTI0YzAgMzIuOC0xOS43IDYxLTQ4IDczLjNWMTkyYzAgMTcuNyAxNC4zIDMyIDMyIDMySDMwNGMxNy43IDAgMzItMTQuMyAzMi0zMlYxNTMuM0MzMDcuNyAxNDEgMjg4IDExMi44IDI4OCA4MGMwLTQ0LjIgMzUuOC04MCA4MC04MHM4MCAzNS44IDgwIDgwYzAgMzIuOC0xOS43IDYxLTQ4IDczLjNWMTkyYzAgNTMtNDMgOTYtOTYgOTZIMjU2djcwLjdjMjguMyAxMi4zIDQ4IDQwLjUgNDggNzMuM2MwIDQ0LjItMzUuOCA4MC04MCA4MHMtODAtMzUuOC04MC04MGMwLTMyLjggMTkuNy02MSA0OC03My4zVjI4OEgxNDRjLTUzIDAtOTYtNDMtOTYtOTZWMTUzLjNDMTkuNyAxNDEgMCAxMTIuOCAwIDgwQzAgMzUuOCAzNS44IDAgODAgMHM4MCAzNS44IDgwIDgwem0yMDggMjRhMjQgMjQgMCAxIDAgMC00OCAyNCAyNCAwIDEgMCAwIDQ4ek0yNDggNDMyYTI0IDI0IDAgMSAwIC00OCAwIDI0IDI0IDAgMSAwIDQ4IDB6Ii8%2bPC9zdmc%2b&style=for-the-badge"></a>
+          <a href=""><img src="https://img.shields.io/github/issues/FajarKim/bz2-shell?label=Issue&color=green&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNDY0IDI1NkEyMDggMjA4IDAgMSAwIDQ4IDI1NmEyMDggMjA4IDAgMSAwIDQxNiAwek0wIDI1NmEyNTYgMjU2IDAgMSAxIDUxMiAwQTI1NiAyNTYgMCAxIDEgMCAyNTZ6bTI1Ni05NmE5NiA5NiAwIDEgMSAwIDE5MiA5NiA5NiAwIDEgMSAwLTE5MnoiLz48L3N2Zz4%3d&style=for-the-badge"></a>
+          <a href=""><img src="https://img.shields.io/github/issues-closed/FajarKim/bz2-shell?label=Issue&color=red&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgUHJvIDYuNC4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIENvcHlyaWdodCAyMDIzIEZvbnRpY29ucywgSW5jLiAtLT48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNDY0IDI1NkEyMDggMjA4IDAgMSAwIDQ4IDI1NmEyMDggMjA4IDAgMSAwIDQxNiAwek0wIDI1NmEyNTYgMjU2IDAgMSAxIDUxMiAwQTI1NiAyNTYgMCAxIDEgMCAyNTZ6bTI1Ni05NmE5NiA5NiAwIDEgMSAwIDE5MiA5NiA5NiAwIDEgMSAwLTE5MnoiLz48L3N2Zz4%3d&style=for-the-badge"></a>
+          <a href=""><img src="https://img.shields.io/github/watchers/FajarKim/bz2-shell?label=Watch&color=blue&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjQuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4gLS0%2bPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTI4OCAzMmMtODAuOCAwLTE0NS41IDM2LjgtMTkyLjYgODAuNkM0OC42IDE1NiAxNy4zIDIwOCAyLjUgMjQzLjdjLTMuMyA3LjktMy4zIDE2LjcgMCAyNC42QzE3LjMgMzA0IDQ4LjYgMzU2IDk1LjQgMzk5LjRDMTQyLjUgNDQzLjIgMjA3LjIgNDgwIDI4OCA0ODBzMTQ1LjUtMzYuOCAxOTIuNi04MC42YzQ2LjgtNDMuNSA3OC4xLTk1LjQgOTMtMTMxLjFjMy4zLTcuOSAzLjMtMTYuNyAwLTI0LjZjLTE0LjktMzUuNy00Ni4yLTg3LjctOTMtMTMxLjFDNDMzLjUgNjguOCAzNjguOCAzMiAyODggMzJ6TTE0NCAyNTZhMTQ0IDE0NCAwIDEgMSAyODggMCAxNDQgMTQ0IDAgMSAxIC0yODggMHptMTQ0LTY0YzAgMzUuMy0yOC43IDY0LTY0IDY0Yy03LjEgMC0xMy45LTEuMi0yMC4zLTMuM2MtNS41LTEuOC0xMS45IDEuNi0xMS43IDcuNGMuMyA2LjkgMS4zIDEzLjggMy4yIDIwLjdjMTMuNyA1MS4yIDY2LjQgODEuNiAxMTcuNiA2Ny45czgxLjYtNjYuNCA2Ny45LTExNy42Yy0xMS4xLTQxLjUtNDcuOC02OS40LTg4LjYtNzEuMWMtNS44LS4yLTkuMiA2LjEtNy40IDExLjdjMi4xIDYuNCAzLjMgMTMuMiAzLjMgMjAuM3oiLz48L3N2Zz4%3d&style=for-the-badge"></a>
+          <a href=""><img src="https://img.shields.io/github/issues-pr/FajarKim/bz2-shell?&label=Pull%20requests&color=green&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjQuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4gLS0%2bPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTMwNS44IDIuMUMzMTQuNCA1LjkgMzIwIDE0LjUgMzIwIDI0VjY0aDE2YzcwLjcgMCAxMjggNTcuMyAxMjggMTI4VjM1OC43YzI4LjMgMTIuMyA0OCA0MC41IDQ4IDczLjNjMCA0NC4yLTM1LjggODAtODAgODBzLTgwLTM1LjgtODAtODBjMC0zMi44IDE5LjctNjEgNDgtNzMuM1YxOTJjMC0zNS4zLTI4LjctNjQtNjQtNjRIMzIwdjQwYzAgOS41LTUuNiAxOC4xLTE0LjIgMjEuOXMtMTguOCAyLjMtMjUuOC00LjFsLTgwLTcyYy01LjEtNC42LTcuOS0xMS03LjktMTcuOHMyLjktMTMuMyA3LjktMTcuOGw4MC03MmM3LTYuMyAxNy4yLTcuOSAyNS44LTQuMXpNMTA0IDgwQTI0IDI0IDAgMSAwIDU2IDgwYTI0IDI0IDAgMSAwIDQ4IDB6bTggNzMuM1YzNTguN2MyOC4zIDEyLjMgNDggNDAuNSA0OCA3My4zYzAgNDQuMi0zNS44IDgwLTgwIDgwcy04MC0zNS44LTgwLTgwYzAtMzIuOCAxOS43LTYxIDQ4LTczLjNWMTUzLjNDMTkuNyAxNDEgMCAxMTIuOCAwIDgwQzAgMzUuOCAzNS44IDAgODAgMHM4MCAzNS44IDgwIDgwYzAgMzIuOC0xOS43IDYxLTQ4IDczLjN6TTEwNCA0MzJhMjQgMjQgMCAxIDAgLTQ4IDAgMjQgMjQgMCAxIDAgNDggMHptMzI4IDI0YTI0IDI0IDAgMSAwIDAtNDggMjQgMjQgMCAxIDAgMCA0OHoiLz48L3N2Zz4%3d&style=for-the-badge"></a>
+          <a href=""><img src="https://img.shields.io/github/issues-pr-closed/FajarKim/bz2-shell?&label=Pull%20requests&color=red&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjQuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4gLS0%2bPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTMwNS44IDIuMUMzMTQuNCA1LjkgMzIwIDE0LjUgMzIwIDI0VjY0aDE2YzcwLjcgMCAxMjggNTcuMyAxMjggMTI4VjM1OC43YzI4LjMgMTIuMyA0OCA0MC41IDQ4IDczLjNjMCA0NC4yLTM1LjggODAtODAgODBzLTgwLTM1LjgtODAtODBjMC0zMi44IDE5LjctNjEgNDgtNzMuM1YxOTJjMC0zNS4zLTI4LjctNjQtNjQtNjRIMzIwdjQwYzAgOS41LTUuNiAxOC4xLTE0LjIgMjEuOXMtMTguOCAyLjMtMjUuOC00LjFsLTgwLTcyYy01LjEtNC42LTcuOS0xMS03LjktMTcuOHMyLjktMTMuMyA3LjktMTcuOGw4MC03MmM3LTYuMyAxNy4yLTcuOSAyNS44LTQuMXpNMTA0IDgwQTI0IDI0IDAgMSAwIDU2IDgwYTI0IDI0IDAgMSAwIDQ4IDB6bTggNzMuM1YzNTguN2MyOC4zIDEyLjMgNDggNDAuNSA0OCA3My4zYzAgNDQuMi0zNS44IDgwLTgwIDgwcy04MC0zNS44LTgwLTgwYzAtMzIuOCAxOS43LTYxIDQ4LTczLjNWMTUzLjNDMTkuNyAxNDEgMCAxMTIuOCAwIDgwQzAgMzUuOCAzNS44IDAgODAgMHM4MCAzNS44IDgwIDgwYzAgMzIuOC0xOS43IDYxLTQ4IDczLjN6TTEwNCA0MzJhMjQgMjQgMCAxIDAgLTQ4IDAgMjQgMjQgMCAxIDAgNDggMHptMzI4IDI0YTI0IDI0IDAgMSAwIDAtNDggMjQgMjQgMCAxIDAgMCA0OHoiLz48L3N2Zz4%3d&style=for-the-badge"></a>
+          <a href="#license"><img src="https://img.shields.io/github/license/FajarKim/bz2-shell?label=License&color=blue&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjQuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4gLS0%2bPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTM4NCAzMkg1MTJjMTcuNyAwIDMyIDE0LjMgMzIgMzJzLTE0LjMgMzItMzIgMzJIMzk4LjRjLTUuMiAyNS44LTIyLjkgNDcuMS00Ni40IDU3LjNWNDQ4SDUxMmMxNy43IDAgMzIgMTQuMyAzMiAzMnMtMTQuMyAzMi0zMiAzMkgzMjAgMTI4Yy0xNy43IDAtMzItMTQuMy0zMi0zMnMxNC4zLTMyIDMyLTMySDI4OFYxNTMuM2MtMjMuNS0xMC4zLTQxLjItMzEuNi00Ni40LTU3LjNIMTI4Yy0xNy43IDAtMzItMTQuMy0zMi0zMnMxNC4zLTMyIDMyLTMySDI1NmMxNC42LTE5LjQgMzcuOC0zMiA2NC0zMnM0OS40IDEyLjYgNjQgMzJ6bTU1LjYgMjg4SDU4NC40TDUxMiAxOTUuOCA0MzkuNiAzMjB6TTUxMiA0MTZjLTYyLjkgMC0xMTUuMi0zNC0xMjYtNzguOWMtMi42LTExIDEtMjIuMyA2LjctMzIuMWw5NS4yLTE2My4yYzUtOC42IDE0LjItMTMuOCAyNC4xLTEzLjhzMTkuMSA1LjMgMjQuMSAxMy44bDk1LjIgMTYzLjJjNS43IDkuOCA5LjMgMjEuMSA2LjcgMzIuMUM2MjcuMiAzODIgNTc0LjkgNDE2IDUxMiA0MTZ6TTEyNi44IDE5NS44TDU0LjQgMzIwSDE5OS4zTDEyNi44IDE5NS44ek0uOSAzMzcuMWMtMi42LTExIDEtMjIuMyA2LjctMzIuMWw5NS4yLTE2My4yYzUtOC42IDE0LjItMTMuOCAyNC4xLTEzLjhzMTkuMSA1LjMgMjQuMSAxMy44bDk1LjIgMTYzLjJjNS43IDkuOCA5LjMgMjEuMSA2LjcgMzIuMUMyNDIgMzgyIDE4OS43IDQxNiAxMjYuOCA0MTZTMTEuNyAzODIgLjkgMzM3LjF6Ii8%2bPC9zdmc%2b&style=for-the-badge"></a>
+         <a href=""><img src="https://img.shields.io/github/languages/code-size/FajarKim/bz2-shell?label=Download%20.zip&color=blue&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODQgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjQuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMyBGb250aWNvbnMsIEluYy4gLS0%2bPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTY0IDBDMjguNyAwIDAgMjguNyAwIDY0VjQ0OGMwIDM1LjMgMjguNyA2NCA2NCA2NEgzMjBjMzUuMyAwIDY0LTI4LjcgNjQtNjRWMTYwSDI1NmMtMTcuNyAwLTMyLTE0LjMtMzItMzJWMEg2NHpNMjU2IDBWMTI4SDM4NEwyNTYgMHpNOTYgNDhjMC04LjggNy4yLTE2IDE2LTE2aDMyYzguOCAwIDE2IDcuMiAxNiAxNnMtNy4yIDE2LTE2IDE2SDExMmMtOC44IDAtMTYtNy4yLTE2LTE2em0wIDY0YzAtOC44IDcuMi0xNiAxNi0xNmgzMmM4LjggMCAxNiA3LjIgMTYgMTZzLTcuMiAxNi0xNiAxNkgxMTJjLTguOCAwLTE2LTcuMi0xNi0xNnptMCA2NGMwLTguOCA3LjItMTYgMTYtMTZoMzJjOC44IDAgMTYgNy4yIDE2IDE2cy03LjIgMTYtMTYgMTZIMTEyYy04LjggMC0xNi03LjItMTYtMTZ6bS02LjMgNzEuOGMzLjctMTQgMTYuNC0yMy44IDMwLjktMjMuOGgxNC44YzE0LjUgMCAyNy4yIDkuNyAzMC45IDIzLjhsMjMuNSA4OC4yYzEuNCA1LjQgMi4xIDEwLjkgMi4xIDE2LjRjMCAzNS4yLTI4LjggNjMuNy02NCA2My43cy02NC0yOC41LTY0LTYzLjdjMC01LjUgLjctMTEuMSAyLjEtMTYuNGwyMy41LTg4LjJ6TTExMiAzMzZjLTguOCAwLTE2IDcuMi0xNiAxNnM3LjIgMTYgMTYgMTZoMzJjOC44IDAgMTYtNy4yIDE2LTE2cy03LjItMTYtMTYtMTZIMTEyeiIvPjwvc3ZnPg%3d%3d&style=for-the-badge"></a>
+       </div>
+       <hr>
+       <div class="content mb-5">
+          <h2>Mengenal Apa Itu BZip2 Shell Exec?</h2>
+          <article>
+            <p>Kata "<b>Exec</b>" dalam nama alat ini merupakan singkatan dari kosakata bahasa Inggris, yaitu <i>executable</i>. Dalam konteks dunia pemrograman, <i>executable</i> adalah file yang berisi instruksi-instruksi yang dapat dieksekusi atau dijalankan oleh sistem operasi. Biasanya, <i>executable</i> digunakan untuk menjalankan program atau aplikasi komputer.</p>
+            <p><i>Executable</i> biasanya dibangun dari kode sumber program yang telah dikompilasi menjadi bentuk yang dapat dieksekusi oleh sistem operasi. Proses kompilasi mengubah kode sumber program (biasanya ditulis dalam bahasa pemrograman tingkat tinggi seperti C, C++, Java, Python, dll.) menjadi instruksi mesin yang dapat langsung dijalankan oleh komputer.</p>
+            <p>Jadi, BZip2 Shell Exec ini merupakan alat yang dirancang khusus, dimana ketika dijalankan, alat ini akan mengenkripsi atau mengompres semua string file shell ke dalam format BZip2 tanpa peru khawatir di<i>recode</i> atau diambil orang lain. File yang sudah dienkripsi akan tetap bisa dijalankan dengan perintah bahasa shell. Adapun jenis bahasa shell yang didukung adalah Bourne Shell (sh), Bourne Again Shell (bash), Z Shell (zsh), Korn Shell (ksh), dan MirBSD Korn Shell (mksh).</p>
+            <p><a href="https://github.com/FajarKim/bz2-shell"><img src="https://github-readme-stats.vercel.app/api/pin/?username=FajarKim&repo=bz2-shell&show_owner=true&theme=transparent" class="img-card" width="100%"></a></p>
+            <hr>
+            <h2>Petunjuk Penginstalan</h2>
+            <h3>Termux</h3>
+            <p>Terdapat dua cara untuk menginstalnya di aplikasi Termux, yaitu:</p>
+            <h4>Cara 1</h4>
+            <p>Cara ini merupakan cara yang manual dan cukup ribet. Caranya cukup dengan menjalankan beberapa perintah yang diperlukan. Berikut ini beberapa perintah yang perlu dijalankan!</p>
+            
+            <ul>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">pkg update -y && pkg upgrade -y</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">pkg install git bzip2 xz-utils -y</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">git clone https://github.com/FajarKim/bz2-shell</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">cd bz2-shell</code></pre></li>
+              <li><p>Kemudian, jalankan file <code>bzsh.sh</code> untuk mulai mengenkripsi file shell.</p>
+                <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash bzsh.sh --help</code></pre>
+             </li>
+             <li><p>Jika Anda ingin menginstalnya ke folder <code>$PATH</code>, cukup jalankan file <code>install.sh</code> yang ada di folder <code>tools/Termux</code>.</p>
+               <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">tools/Termux/install.sh</code></pre>
+               <p>atau</p>
+               <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">cd tools/Termux && bash install.sh</code></pre>
+            </li>
+            <li><p>Jika berhasil terinstal, jalankan perintah:</p>
+                <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bzsh --help</code></pre>
+            </li>
+            </ul>
+            <hr>
+            <h4>Cara 2</h4>
+            <p>Sedikit berbeda dengan cara sebelumnya, cara ini bisa dibilang simpel karena akan langsung menginstal alat ini ke folder <code>$PATH</code>. Berikut ini caranya!</p>
+            <ul>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">pkg update -y && pkg upgrade -y</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">pkg install git bzip2 xz-utils -y</code></pre></li>
+              <li><p>Jika paket sudah terinstal, langkah selanjutnya dengan menjalankan perintah berikut ini!</p></li>
+            </ul>
+            <div class="text-md-right mb-4 code-tabs">
+               <ul class="nav nav-tabs"></ul>
+                  <div class="tab-content">
+                    <div class="tab-pane" title="Metode 1">
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">pkg install curl -y</code></pre>
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash -c "$(curl -fsSL https://raw.githubusercontent.com/FajarKim/bz2-shell/master/tools/Termux/install.sh)"</code></pre>
+                   </div>
+                   <div class="tab-pane" title="Metode 2">
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">pkg install wget -y</code></pre>
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash -c "$(wget -qO- https://raw.githubusercontent.com/FajarKim/bz2-shell/master/tools/Termux/install.sh)"</code></pre>
+                   </div>
+                   <div class="tab-pane" title="Metode 3">
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">pkg install fetch -y</code></pre>
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash -c "$(fetch -o - https://raw.githubusercontent.com/FajarKim/bz2-shell/master/tools/Termux/install.sh)"</code></pre>
+                  </div>
+               </div>
+            </div>
+            <p>Sebagai alternatif, Anda dapat mengunduh skrip <code>install.sh</code> terlebih dahulu dan menjalankannya setelah menginstalnya:</p>
+            <ul>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">pkg install wget -y</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">wget https://raw.githubusercontent.com/FajarKim/bz2-shell/master/tools/Termux/install.sh</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash install.sh</code></pre></li>
+            </ul>
+            <hr>
+            <h3>Linux</h3>
+            <p>Terdapat dua cara untuk menginstalnya di Linux (seperti Ubuntu), yaitu:</p>
+            <h4>Cara 1</h4>
+            <p>Cara ini merupakan cara yang manual dan cukup ribet. Caranya cukup dengan menjalankan beberapa perintah yang diperlukan. Berikut ini beberapa perintah yang perlu dijalankan!</p>
+            
+            <ul>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">apt update -y && apt upgrade -y</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">apt install git bzip2 xz-utils -y</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">git clone https://github.com/FajarKim/bz2-shell</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">cd bz2-shell</code></pre></li>
+              <li><p>Kemudian, jalankan file <code>bzsh.sh</code> untuk mulai mengenkripsi file shell.</p>
+                <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash bzsh.sh --help</code></pre>
+             </li>
+             <li><p>Jika Anda ingin menginstalnya ke folder <code>$PATH</code>, cukup jalankan file <code>install.sh</code> yang ada di folder <code>tools/Linux</code>.</p>
+               <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">tools/Linux/install.sh</code></pre>
+               <p>atau</p>
+               <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">cd tools/Linux && bash install.sh</code></pre>
+            </li>
+            <li><p>Jika berhasil terinstal, jalankan perintah:</p>
+                <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bzsh --help</code></pre>
+            </li>
+            </ul>
+            <hr>
+            <h4>Cara 2</h4>
+            <p>Sedikit berbeda dengan cara sebelumnya, cara ini bisa dibilang simpel karena akan langsung menginstal alat ini ke folder <code>$PATH</code>. Berikut ini caranya!</p>
+            <ul>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">apt update -y && apt upgrade -y</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">apt install git bzip2 xz-utils -y</code></pre></li>
+              <li><p>Jika paket sudah terinstal, langkah selanjutnya dengan menjalankan perintah berikut ini!</p></li>
+            </ul>
+            <div class="text-md-right mb-4 code-tabs">
+               <ul class="nav nav-tabs"></ul>
+                  <div class="tab-content">
+                    <div class="tab-pane" title="Metode 1">
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">apt install curl -y</code></pre>
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash -c "$(curl -fsSL https://raw.githubusercontent.com/FajarKim/bz2-shell/master/tools/Linux/install.sh)"</code></pre>
+                   </div>
+                   <div class="tab-pane" title="Metode 2">
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">apt install wget -y</code></pre>
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash -c "$(wget -qO- https://raw.githubusercontent.com/FajarKim/bz2-shell/master/tools/Linux/install.sh)"</code></pre>
+                   </div>
+                   <div class="tab-pane" title="Metode 3">
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">apt install fetch -y</code></pre>
+                        <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash -c "$(fetch -o - https://raw.githubusercontent.com/FajarKim/bz2-shell/master/tools/Linux/install.sh)"</code></pre>
+                  </div>
+               </div>
+            </div>
+            <p>Sebagai alternatif, Anda dapat mengunduh skrip <code>install.sh</code> terlebih dahulu dan menjalankannya setelah menginstalnya:</p>
+            <ul>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">apt install wget -y</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">wget https://raw.githubusercontent.com/FajarKim/bz2-shell/master/tools/Linux/install.sh</code></pre></li>
+              <li><pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bash install.sh</code></pre></li>
+            </ul>
+            <hr>
+            <h2>Petunjuk Penggunaan</h2>
+            <p>Alat ini diprogram untuk bisa dijalankan dengan beberapa perintah. Perintah yang didukung:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th><div align="center"><b>Perintah</b></div></th>
+                  <th><div align="center"><b>Keterangan</b></div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>-h</code> atau <code>--help</code></td>
+                  <td>Menampilkan bantuan untuk alat ini</td>
+                </tr>
+                <tr>
+                  <td><code>-v</code> atau <code>--version</code></td>
+                  <td>Informasi versi keluaran terbaru</td>
+                </tr>
+                <tr>
+                  <td><code>-t</code> atau <code>--type-shell</code></td>
+                  <td>Pilih jenis shell (sh, bash, zsh, ksh, atau mksh)</td>
+                </tr>
+                <tr>
+                  <td><code>-f</code> atau <code>--file</code></td>
+                  <td>Kompres setiap FILE sebagai gantinya</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Cara menjalankan alat ini:
+            <h4>Contoh 1</h4>
+            <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bzsh -t bash -f FILE</code></pre>
+            <p>atau</p>
+            <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bzsh --type-shell bash --file FILE</code></pre>
+            <hr>
+            <h4>Contoh 2</h4>
+            <p>Jika ingin mengenkripsi lebih dari 1 file dalam waktu yang sama, Anda bisa lakukan itu.</p>
+            <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bzsh -t bash -f FILE1 FILE2 FILE3 etc...</code></pre>
+            <p>atau</p>
+            <pre class="language-bash no-whitespace-highlight"><code data-lang="bash">bzsh --type-shell bash --file FILE1 FILE2 FILE 3 etc...</code></pre>
+            <hr>
+            <h4>Catatan</h4>
+            <div class="notices info">
+              <p>Semakin banyak jumlah baris dalam sebuah file atau semakin besar ukuran sebuah file, semakin lama waktu yang dibutuhkan untuk mengenkripsi.</p>
+            </div>
+            <div class="notices warning">
+              <p>Alat ini mungkin tidak kompitabel atau tidak didukung dibeberapa Linux, seperti di Ultrix.</p>
+            </div>
+            <hr>
+            <h2 id="license">Lisensi</h2>
+            <h3>GNU Affero General Public License v3.0</h3>
+            <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/AGPLv3_Logo.svg" class="img-card" alt="AGPL v3.0 Logo" href="https://www.gnu.org/licenses/agpl-3.0.html"></p>
+            <p>Izin dari lisensi copyleft terkuat ini bergantung pada ketersediaan kode sumber lengkap dari karya yang dilisensikan dan modifikasinya, yang mencakup karya yang lebih besar yang menggunakan karya yang dilisensikan, di bawah lisensi yang sama. Pemberitahuan hak cipta dan lisensi harus dipertahankan. Para kontributor memberikan izin ekspres untuk menggunakan paten. Ketika versi yang dimodifikasi digunakan untuk menyediakan layanan melalui jaringan, kode sumber lengkap dari versi yang dimodifikasi harus tersedia.</p>
+            <h5>Izin</h5>
+            <p><font color="#00FF00"><span class="fas fa-check"></span></font> Penggunaan komersial</br>
+            <font color="#00FF00"><span class="fas fa-check"></span></font> Modifikasi</br>
+            <font color="#00FF00"><span class="fas fa-check"></span></font> Distribusi</br>
+            <font color="#00FF00"><span class="fas fa-check"></span></font> Penggunaan paten</br>
+            <font color="#00FF00"><span class="fas fa-check"></span></font> Penggunaan pribadi</p>
+            <h5>Batasan</h5>
+            <p><font color="#FF0000"><span class="fas fa-xmark"></span></font> Tanggung jawab</br>
+            <font color="#FF0000"><span class="fas fa-xmark"></span></font> Jaminan</p>
+            <h5>Syarat-syarat</h5>
+            <p><font color="#0090FF"><span class="fas fa-circle-info"></span></font> Pemberitahuan lisensi dan hak cipta</br>
+            <font color="#0090FF"><span class="fas fa-circle-info"></span></font> Perubahan status</br>
+            <font color="#0090FF"><span class="fas fa-circle-info"></span></font> Mengungkapkan sumber</br>
+            <font color="#0090FF"><span class="fas fa-circle-info"></span></font> Penggunaan jaringan adalah distribusi</br>
+            <font color="#0090FF"><span class="fas fa-circle-info"></span></font> Lisensi yang sama</p>
+            <p><small><span>Ini bukan nasihat hukum. <a href="https://docs.github.com/articles/licensing-a-repository/#disclaimer">Pelajari lebih lanjut tentang lisensi repositori</a></span></small></p>
+            <p><a href="https://www.gnu.org/licenses/agpl-3.0.html"><button class="btn-box btn-box-outline-primary active"><span class="fas fa-arrow-right"></span> Lihat Website Resmi</button></a></p>
+            <hr>
+            <h2 id="changelog">Daftar Perubahan</h2>
+            <p>Daftar perubahan versi:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th><div align="center"><b>Versi</b></div></th>
+                  <th><div align="center"><b>Keterangan</b></div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-md-2 col-sm-1 text-center text-md-center mb-2"><span class="fas fa-tags"></span> v1.0.0</td>
+                  <td>Release</td>
+                </tr>
+                <tr>
+                  <td class="col-md-2 col-sm-1 text-center text-md-center mb-2"><span class="fas fa-tags"></span> v1.0.1 (saat ini)</td>
+                  <td class="col-md-7 col-sm-6 text-left text-md-left mb-3">
+                    <p><b>MEMPERBAIKI</b></p>
+                    <ul>
+                      <li>Memperbaiki file <code>install.sh</code> dan <code>bzsh.sh</code> yang <i>error</i> saat dijalankan di beberapa Linux</li>
+                    </ul>
+                    <p><b>MENGUBAH</b></p>
+                    <ul>
+                      <li>Mengubah tampilan "sukses" untuk file <code>install.sh</code></li>
+                      <li>Mengubah hasil enkripsi file dengan menambahkan beberapa teks</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </article>
+        </div>
+        <div></br></br>
+        <ul class="nav nav-pills nav-pills-icon row text-center" id="contactType" role="tablist">
+        <li class="nav-item col-md-6 col-sm-6" role="presentation">
+           <a class="nav-link shadow active" id="tab-sendemail" data-toggle="tab" href="#sendEmail" role="tab" aria-controls="sendEmail" aria-selected="true">
+              <h4 class="text-uppercase mt-3 d-block"><font color="#929292"><span class="fas fa-envelope"></font> Email</h4>
+           </a>
+        </li>
+        <li class="nav-item col-md-6 col-sm-6" role="presentation">
+           <a class="nav-link shadow" id="tab-sendwa" data-toggle="tab" href="#sendWhatsApp" role="tab" aria-controls="sendWhatsApp" aria-selected="false">
+            <h4 class="text-uppercase mt-3 d-block"><font color="#929292"><span class="fab fa-whatsapp"></font> WhatsApp</h4>
+         </a>
+        </li>
+     </ul>
+     </div>
+     
+     <div class="row">
+         <div class="col-12">
+            <div class="tab-content" id="contactContent">
+               <div class="tab-pane fade show active" id="sendEmail" role="tabpanel" aria-labelledby="tab-sendemail">
+                  <div class="content"></br>
+                     <form method="POST" action="https://formsubmit.co/fajarrkim@gmail.com" target="_blank">
+                       <div class="form-group">
+                         <label for="name">Nama Lengkap (Wajib)</label>
+                         <input type="text" name="name" id="name" class="form-control" placeholder="Rangga Fajar Oktariansyah" required>
+                       </div>
+                       <div class="form-group">
+                         <label for="email">Alamat Email (Wajib)</label>
+                         <input type="email" name="email" id="email" class="form-control" placeholder="youremail@example.com" required>
+                       </div>
+                       <div class="form-group">
+                         <label for="subject">Alasan Menghubungi (Wajib)</label>
+                         <input type="text" name="_subject" id="subject" class="form-control" placeholder="Pertanyaan Umum" required>
+                       </div>
+                       <div class="form-group">
+                         <label for="message">Tulis Pesan Anda (Wajib)</label>
+                         <textarea name="message" id="message" class="form-control" placeholder="Ketik di sini..." required></textarea>
+                         <input type="hidden" name="_captcha" value="true">
+                         <input type="hidden" name="_template" value="box">
+                         <input type="hidden" name="_next" value="https://fajarkim.github.io/gYq54A.html">
+                       </div>
+                       <button type="submit" class="btn btn-primary">Kirim Sekarang</button>
+                     </form>
+                     <center><small>Powered by formsubmit.co</small></center>
+                 </div>
+             </div>
+             <div class="tab-pane fade" id="sendWhatsApp" role="tabpanel" aria-labelledby="tab-sendwa">
+                  <div class="content"></br>
+                     <form>
+                       <div class="form-group">
+                         <label for="name">Nama Lengkap (Wajib)</label>
+                         <input class="validate form-control" id="wa_name" name="name" placeholder="Rangga Fajar Oktariansyah" required="" type="text" value=''/>
+                       </div>
+                       <div class="form-group">
+                         <label for="number">Nomor WhatsApp (Wajib)</label>
+                         <input class="validate form-control" id="wa_number" name="count" placeholder="62xxxxxxxxxxx" required="" type="number" value=''/>
+                       </div>
+                       <div class="form-group">
+                         <label for="subject">Alasan Menghubungi (Wajib)</label>
+                         <input class="validate form-control" id="wa_subject" name="subject" placeholder="Pertanyaan Umum" required="" type="text" value=''/>
+                       </div>
+                       <div class="form-group">
+                         <label for="message">Tulis Pesan Anda (Wajib)</label>
+                         <textarea class="form-control" id='wa_textarea' placeholder="Ketik di sini..." maxlength='5000' row='1' required></textarea>
+                       </div>
+                       <button style="text-decoration:none" class="send_form btn btn-primary" href="javascript:void" type="submit" title="Kirim Sekarang">Kirim Sekarang</button>
+                     </form>
+                     <small><div id="text-info"></div></small>
+                     <center><small>Created by www.idblanter.com</small></center>
+
+                     <script type="text/javascript">
+//<![CDATA[
+$(document).on('click','.send_form', function(){
+var input_blanter = document.getElementById('wa_number');
+
+/* Whatsapp Settings */
+var walink = 'https://web.whatsapp.com/send',
+    phone = '6285659850910',
+    walink2 = 'Halo kak 👋🏻';
+    text_yes = 'Terkirim';
+    text_no = 'Isi semua form dengan lengkap!';
+
+/* Smartphone Support */
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+var walink = 'whatsapp://send';
+}
+
+if("" != input_blanter.value){
+
+ /* Call Input Form */
+var input_select1 = $("#wa_select :selected").text(),
+    input_name1 = $("#wa_name").val(),
+    input_number1 = $("#wa_number").val(),
+    input_subject1 = $("#wa_subject").val(),
+    input_textarea1 = $("#wa_textarea").val();
+
+/* Final Whatsapp URL */
+var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' +
+    '*Nama*: ' + input_name1 + '%0A' +
+    '*Nomor WhatsApp*: ' + input_number1 + '%0A' +
+    '*Subjek*: ' + input_subject1 + '%0A' +
+    '*Pesan*: ' + input_textarea1 + '%0A';
+
+/* Whatsapp Window Open */
+window.open(blanter_whatsapp,'_blank');
+document.getElementById("text-info").innerHTML = '<div class="content notices info"><p>'+text_yes+'</p></div>';
+} else {
+document.getElementById("text-info").innerHTML = '<div class="content notices warning"><p>'+text_no+'</p></div>';
+}
+});
+//]]>
+                     </script>
+                  </div>
+             </div>
+          </div>
+        </div>
+     </div>
+     
+     <div class="row">
+      <div class="col-lg-8 mx-auto">
+        
+        <div class="content mb-5">
+        	</br><p>Atau bisa juga dengan mengklik tautan berikut untuk menuju chat secara langsung:</p>
+        </div>
+        <div class="widget">
+          <h4 class="widget-title"><span>Kontak Saya</span></h4>
+          <ul class="list-inline widget-social">
+            <li class="list-inline-item"><a href="https://wa.me/6285659850910"><span class="fab fa-whatsapp"></span></a></li>
+            <li class="list-inline-item"><a href="https://t.me/FajarThea"><span class="fab fa-telegram"></span></a></li>
+            <li class="list-inline-item"><a href="https://m.me/fajarrkim"><span class="fab fa-facebook-messenger"></span></a></li>
+            <li class="list-inline-item"><a href="mailto:fajarrkim@gmail.com"><span class="fas fa-envelope"></span></a></li>
+          </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <svg class="footer-border" height="214" viewBox="0 0 2204 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2203 213C2136.58 157.994 1942.77 -33.1996 1633.1 53.0486C1414.13 114.038 1200.92 188.208 967.765 118.127C820.12 73.7483 263.977 -143.754 0.999958 158.899"
+      stroke-width="2" />
+  </svg>
+  
+  <div class="instafeed text-center mb-5">
+      <h2 class="h3 mb-4">INSTAGRAM POST</h2>
+      
+      <div class="instagram-slider">
+        <div class="instagram-post"><img src="/assets/images/instagram/1.jpg"></div>
+        <div class="instagram-post"><img src="/assets/images/instagram/2.jpg"></div>
+        <div class="instagram-post"><img src="/assets/images/instagram/4.jpg"></div>
+        <div class="instagram-post"><img src="/assets/images/instagram/3.jpg"></div>
+        <div class="instagram-post"><img src="/assets/images/instagram/2.jpg"></div>
+        <div class="instagram-post"><img src="/assets/images/instagram/1.jpg"></div>
+        <div class="instagram-post"><img src="/assets/images/instagram/3.jpg"></div>
+        <div class="instagram-post"><img src="/assets/images/instagram/4.jpg"></div>
+        <div class="instagram-post"><img src="/assets/images/instagram/2.jpg"></div>
+        <div class="instagram-post"><img src="/assets/images/instagram/4.jpg"></div>
+      </div>
+  </div>
+
+  <div id="footerHTMLinclude"></div>
+</footer>
+
+
+  <!-- JS Plugins -->
+  <script src="/assets/plugins/jQuery/jquery.min.js"></script>
+
+  <script src="/assets/plugins/bootstrap/bootstrap.min.js"></script>
+
+  <script src="/assets/plugins/slick/slick.min.js"></script>
+
+  <script src="/assets/plugins/instafeed/instafeed.min.js"></script>
+  
+  <script src="/assets/plugins/prismjs/prism.js"></script>
+
+  <!-- Main Script -->
+  <script src="/assets/js/script.js"></script></body>
+</html>
