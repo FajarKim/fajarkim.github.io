@@ -9,6 +9,7 @@ VERSION:	-
 -------------------------------------------------------------------*/
 /*  typography */
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap");
+
 body {
   line-height: 1.7;
   font-family: "Nunito Sans", sans-serif;
@@ -79,9 +80,12 @@ h6, .h6 {
   color: #fff;
   border-color: #929292;
 }
-.btn-primary:active, .btn-primary:hover, .btn-primary.focus, .btn-primary.active {
+.btn-primary:active, .btn-primary.focus, .btn-primary.active {
   background: #929292 !important;
   border-color: #929292 !important;
+}
+.btn-primary:hover {
+  opacity: 50%;
 }
 
 .btn-outline-primary {
@@ -93,6 +97,37 @@ h6, .h6 {
   background: #929292 !important;
   border-color: #929292 !important;
   color: #fff;
+}
+
+.btn-box {
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 0px;
+  border: 0px solid;
+  position: relative;
+  z-index: 0;
+  transition: 0.2s ease;
+}
+.btn-box:hover, .btn-box:active, .btn-box:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.btn-box-outline-primary {
+  background: transparent;
+  color: #929292;
+  border-color: #929292;
+}
+.btn-box-outline-primary:active, .btn-box-outline-primary.focus, .btn-box-outline-primary.active {
+  background: #929292 !important;
+  border-color: #929292 !important;
+  color: #fff;
+}
+.btn-box-outline-primary:hover {
+  opacity: 50%;
 }
 
 body {
@@ -920,29 +955,34 @@ mark {
   max-width: 100%;
   margin-bottom: 1rem;
   border: 1px solid #EBEBEB;
+  overflow: auto;
 }
 .content table td,
 .content table th {
   padding: 0.75rem;
   vertical-align: top;
   margin-bottom: 0;
+  border: 1px solid #EBEBEB;
 }
 .content tr:not(:last-child) {
-  border-bottom: 1px solid #EBEBEB;
+  border: 1px solid #EBEBEB;
 }
 .content th {
   font-weight: 500;
+  border: 1px solid #EBEBEB;
 }
 .content thead {
   background: #F9F9F9;
   margin-bottom: 0;
+  border: 1px solid #EBEBEB;
 }
 .content thead tr {
-  border-bottom: 1px solid #EBEBEB;
+  border: 1px solid #EBEBEB;
 }
 .content tbody {
   background: white;
   margin-bottom: 0;
+  border: 1px solid #EBEBEB;
 }
 .content .notices {
   margin: 2rem 0;
@@ -954,13 +994,40 @@ mark {
   margin-bottom: 0;
   background-color: #fff !important;
 }
-.content .notices p::before {
+.content .notices.note p::before {
   position: absolute;
   top: 2px;
   color: #fff;
-  font-family: "themify";
+  font-family: FontAwesome;
   font-weight: 900;
-  content: "\e717";
+  content: "\f044";
+  left: 10px;
+}
+.content .notices.tip p::before {
+  position: absolute;
+  top: 2px;
+  color: #fff;
+  font-family: FontAwesome;
+  font-weight: 900;
+  content: "\f0eb";
+  left: 10px;
+}
+.content .notices.info p::before {
+  position: absolute;
+  top: 2px;
+  color: #fff;
+  font-family: FontAwesome;
+  font-weight: 900;
+  content: "\f05a";
+  left: 10px;
+}
+.content .notices.warning p::before {
+  position: absolute;
+  top: 2px;
+  color: #fff;
+  font-family: FontAwesome;
+  font-weight: 900;
+  content: "\f071";
   left: 10px;
 }
 .content .notices.note p {
@@ -975,7 +1042,7 @@ mark {
   left: 2rem;
 }
 .content .notices.tip p {
-  border-top: 30px solid #F3FF97;
+  border-top: 30px solid #7F7F7F;
   background: #F9F9F9;
 }
 .content .notices.tip p::after {
@@ -1024,6 +1091,7 @@ mark {
   padding: 9.5px;
   margin: 10px 0px 10px;
   white-space: pre-wrap;
+  overflow-z: auto;
 }
 .content code {
   margin-bottom: 0 !important;
@@ -1460,4 +1528,17 @@ mark {
 
 .shadow-none {
   box-shadow: none !important;
+}
+
+.widget-repo {
+  display: flex;
+  justify-content: space-around;
+}
+.widget-repo a {
+  padding: 10px;
+  font-size: 13px;
+  color: #777;
+}
+.widget-repo a:hover {
+  color: #929292;
 }
