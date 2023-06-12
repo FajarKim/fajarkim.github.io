@@ -1530,15 +1530,7 @@ mark {
   box-shadow: none !important;
 }
 
-.widget-repo {
-  display: flex;
-  justify-content: space-around;
-}
-.widget-repo a {
-  padding: 10px;
-  font-size: 13px;
-  color: #777;
-}
-.widget-repo a:hover {
-  color: #929292;
+.badge-inline a {
+  display: inline-block;
+  margin: 2px 0px;
 }
