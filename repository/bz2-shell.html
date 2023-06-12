@@ -35,7 +35,8 @@
   </script>
 </head>
 <body>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v17.0" nonce="xgXDdtQw"></script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v17.0&appId=744668524118507&autoLogAppEvents=1" nonce="MPFqAKAw"></script>
 <!-- navigation -->
 <header class="navigation fixed-top">
   <!-- navigation -->
@@ -561,7 +562,9 @@ document.getElementById("text-info").innerHTML = '<div class="content notices wa
           <article>
             <hr>
             <h4 id="comment"><span class="fas fa-comment"></span> Komentar</h4>
-            <div class="fb-comments" data-href="https://fajarkim.github.io/repository/bz2-shell#comment" data-width="100%" data-numposts="10" width="100%"></div>
+            <div class="widget widget-card widget-social">
+              <div class="fb-comments" data-href="https://fajarkim.github.io/repository/bz2-shell#comment" data-width="100%" data-numposts="10" width="100%" data-lazy="true"></div>
+            </div>
           </article>
        </div>
       </div>
