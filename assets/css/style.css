@@ -1534,3 +1534,10 @@ mark {
   display: inline-block;
   margin: 2px 0px;
 }
+
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
