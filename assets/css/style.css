@@ -1311,8 +1311,7 @@ mark {
   color: #929292;
 }
 
-.instagram-post img {
-  height: 160px;
+.repo-post img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
